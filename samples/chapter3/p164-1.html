@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			a {
+				color: black;
+			}
+
+			@scope (.attention) {
+				a {
+					color: red;
+				}
+			}
+
+			@scope (.post) {
+				a:any-link {
+					color: royalblue;
+				}
+			}
+
+			@layer base {
+				body {
+					margin: 16px;
+				}
+
+				article {
+					h1 {
+						margin: 0;
+						font-size: 24px;
+					}
+
+					p {
+						margin: 8px 0;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<article class="post">
+			<h1>Home Office</h1>
+			<p>環境を整えることで<a href="">快適な空間</a>を作り出します</p>
+			<p class="attention">※<a href="">注意事項</a>をご確認の上、ご利用ください</p>
+		</article>
+		<small><a href="">プライバシーポリシー</a></small>
+	</body>
+</html>

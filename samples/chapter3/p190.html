@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				background-color: rgb(from orange r g b);
+			}
+
+			.s02 {
+				background-color: rgb(from orange r 255 b);
+			}
+
+			/* base */
+			@layer base {
+				div {
+					width: 100px;
+					height: 100px;
+				}
+
+				body {
+					display: grid;
+					grid-auto-flow: column;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01"></div>
+		<div class="s02"></div>
+	</body>
+</html>

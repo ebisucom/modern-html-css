@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01,
+			.s02 {
+				div {
+					width: 48px;
+					height: 48px;
+					background: rgb(from gold r g b / 0.8);
+					offset-path: path("M 60 40 Q 300 250 350 50");
+					/* animation: move 5s infinite linear; */
+				}
+			}
+
+			@keyframes move {
+				0% {
+					offset-distance: 0%;
+				}
+				100% {
+					offset-distance: 100%;
+				}
+			}
+
+			/* base */
+			@layer base {
+				* {
+					box-sizing: border-box;
+				}
+				section {
+					width: 400px;
+					height: 200px;
+					margin: 60px;
+					border: solid 20px rgb(from lightgreen r g b / 0.8);
+
+					h2 {
+						margin: 0;
+						font-size: 20px;
+						line-height: 1;
+					}
+
+					div {
+						width: 48px;
+						height: 48px;
+						background: rgb(from gold r g b / 0.8);
+					}
+				}
+
+				.s02 {
+					background-image: url(assets/offset-path01.svg);
+					background-position: 0 20px;
+					background-repeat: no-repeat;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+
+		<section class="s01">
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+
+		<section class="s02">
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet" />
+		<style>
+			h1 {
+				font-family: "Nabla";
+			}
+
+			/* カスタムのパレット */
+			h1.custom {
+				font-palette: --my-color;
+			}
+
+			@font-palette-values --my-color {
+				font-family: "Nabla";
+				base-palette: 2;
+				override-colors: 6 yellow, 8 #98ef98;
+			}
+
+			/* base */
+			@layer base {
+				h1 {
+					font-size: 100px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="custom">Home Office</h1>
+	</body>
+</html>

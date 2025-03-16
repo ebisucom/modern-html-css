@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			/* font-feature-settings */
+			p.s01 {
+				font-family: "Arial";
+				font-feature-settings: "ss02", "ss03", "salt";
+			}
+
+			/* font-variant-alternates */
+			@font-feature-values "Arial" {
+				@styleset {
+					my-ss02: 2;
+					my-ss03: 3;
+				}
+
+				@stylistic {
+					my-salt: 1;
+				}
+			}
+
+			p.s02 {
+				font-family: "Arial";
+				font-variant-alternates: styleset(my-ss02, my-ss03) stylistic(my-salt);
+			}
+
+			@font-face {
+				font-family: Arial;
+				src: local("Arial");
+			}
+
+			/* base */
+			@layer base {
+				p {
+					font-size: 50px;
+					color: red;
+				}
+
+				span {
+					color: blue;
+				}
+
+				span.ss03 {
+					color: green;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p>M<span class="ss03">y</span> A<span>I</span></p>
+
+		<p class="s01">M<span class="ss03">y</span> A<span>I</span></p>
+
+		<p class="s02">M<span class="ss03">y</span> A<span>I</span></p>
+	</body>
+</html>

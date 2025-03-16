@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			img.s01 {
+				image-rendering: pixelated;
+			}
+
+			img.s02 {
+				image-rendering: -webkit-optimize-contrast;
+				image-rendering: crisp-edges;
+			}
+
+			img.s03 {
+				image-rendering: smooth;
+			}
+
+			/* base */
+			@layer base {
+				img {
+					display: block;
+					margin-bottom: 30px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<img src="assets/figure.png" width="400" />
+		<img src="assets/figure.png" width="400" class="s01" />
+		<img src="assets/figure.png" width="400" class="s02" />
+		<img src="assets/figure.png" width="400" class="s03" />
+	</body>
+</html>

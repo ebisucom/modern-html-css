@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			:root {
+				color-scheme: light dark;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 16px;
+					justify-items: center;
+					padding-bottom: 500px;
+
+					> * {
+						width: min(100%, 320px);
+					}
+				}
+				form {
+					display: grid;
+					gap: 12px;
+
+					div {
+						display: grid;
+						gap: 4px;
+					}
+
+					input {
+						padding: 8px;
+					}
+
+					button {
+						font-size: 100%;
+						font-weight: bold;
+						padding: 8px;
+					}
+				}
+				h2 {
+					margin: 0;
+					font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				}
+				label {
+					display: block;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Ready to start</h2>
+		<form action="..." method="post">
+			<div>
+				<label for="userName">ユーザー名</label>
+				<input id="userName" type="text" name="userName" placeholder="name@example.com" />
+			</div>
+			<button type="submit">次へ進む »</button>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+
+		<style>
+			.s01 {
+				strong {
+					quotes: auto;
+				}
+				strong::before {
+					content: open-quote;
+				}
+				strong::after {
+					content: close-quote;
+				}
+				span::before {
+					content: open-quote;
+				}
+				span::after {
+					content: close-quote;
+				}
+			}
+
+			.s02 {
+				strong::before {
+					content: open-quote;
+					quotes: none;
+				}
+				strong::after {
+					content: close-quote;
+					quotes: none;
+				}
+				span::before {
+					content: open-quote;
+				}
+				span::after {
+					content: close-quote;
+				}
+			}
+
+			.s03 {
+				strong::before {
+					content: no-open-quote;
+				}
+				strong::after {
+					content: no-close-quote;
+				}
+				span::before {
+					content: open-quote;
+				}
+				span::after {
+					content: close-quote;
+				}
+			}
+
+			.s04 {
+				strong {
+					quotes: "【" "】" "≪" "≫";
+				}
+
+				strong::before {
+					content: open-quote;
+				}
+				strong::after {
+					content: close-quote;
+				}
+				span::before {
+					content: open-quote;
+				}
+				span::after {
+					content: close-quote;
+				}
+			}
+
+			/* base */
+			@layer base {
+				strong {
+					&::before,
+					&::after {
+						color: red;
+					}
+				}
+				span {
+					&::before,
+					&::after {
+						color: blue;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="s01">
+			<strong><span>リラックス</span>して仕事をする</strong>
+		</p>
+		<p class="s02">
+			<strong><span>リラックス</span>して仕事をする</strong>
+		</p>
+		<p class="s03">
+			<strong><span>リラックス</span>して仕事をする</strong>
+		</p>
+		<p class="s04">
+			<strong><span>リラックス</span>して仕事をする</strong>
+		</p>
+	</body>
+</html>

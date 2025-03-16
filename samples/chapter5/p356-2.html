@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.clamp {
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 3;
+				line-clamp: 3;
+			}
+
+			/* base */
+			@layer base {
+				p {
+					width: 200px;
+					margin-bottom: 20px;
+					border: solid 4px pink;
+					font-size: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="clamp">家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。</p>
+	</body>
+</html>

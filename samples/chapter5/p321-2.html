@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+		<style>
+			p {
+				font-family: Lora, "Times New Roman", serif;
+			}
+
+			/* base */
+			@layer base {
+				p {
+					font-size: 20px;
+					line-height: 1.5;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h2>代替フォント</h2>
+		<p style="font-family: 'Times New Roman'">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum, diam ac commodo pulvinar, ligula tortor posuere nisi, a porta ligula odio at diam.
+		</p>
+
+		<h2>リモートフォント</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum, diam ac commodo pulvinar, ligula tortor posuere nisi, a porta ligula odio at diam.</p>
+	</body>
+</html>

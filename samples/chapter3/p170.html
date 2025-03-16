@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.post a {
+				color: royalblue;
+			}
+
+			p::part(link) {
+				color: red;
+			}
+
+			p::part(link extra) {
+				font-size: smaller;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 16px;
+				}
+
+				article {
+					h1 {
+						margin: 0;
+						font-size: 24px;
+					}
+
+					p {
+						margin: 8px 0;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<article class="post">
+			<h1>Home Office</h1>
+			<p>環境を整えることで<a href="…">快適な空間</a>を 作り出します</p>
+			<p>
+				<template shadowrootmode="open">
+					※<a href="#" part="link">注意事項</a> をご確認の上、 ご利用ください<br />
+					<a href="#" part="link extra"> プライバシーポリシー</a>
+				</template>
+			</p>
+		</article>
+	</body>
+</html>

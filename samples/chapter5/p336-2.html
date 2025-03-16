@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet" />
+		<style>
+			h1 {
+				font-family: "Nabla";
+			}
+
+			.mix01 {
+				font-palette: palette-mix(in srgb, --yellow 100%, --red 0%);
+			}
+			.mix02 {
+				font-palette: palette-mix(in srgb, --yellow 70%, --red 30%);
+			}
+			.mix03 {
+				font-palette: palette-mix(in srgb, --yellow 50%, --red 50%);
+			}
+			.mix04 {
+				font-palette: palette-mix(in srgb, --yellow 30%, --red 70%);
+			}
+			.mix05 {
+				font-palette: palette-mix(in srgb, --yellow 0%, --red 100%);
+			}
+
+			@font-palette-values --yellow {
+				font-family: "Nabla";
+				base-palette: 0;
+			}
+
+			@font-palette-values --red {
+				font-family: "Nabla";
+				base-palette: 1;
+			}
+
+			/* base */
+			@layer base {
+				h1 {
+					margin: 0;
+					font-size: 100px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="mix01">Home Office</h1>
+		<h1 class="mix02">Home Office</h1>
+		<h1 class="mix03">Home Office</h1>
+		<h1 class="mix04">Home Office</h1>
+		<h1 class="mix05">Home Office</h1>
+	</body>
+</html>

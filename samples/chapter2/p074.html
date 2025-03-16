@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+		<style>
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 0;
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+				h1 {
+					margin: 0;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<img
+			src="assets/home.jpg"
+			alt="オフィス内のテーブルにトマトやパスタを置いています"
+			width="1500"
+			height="1000"
+			srcset="assets/500w.jpg 500w, assets/1000w.jpg 1000w, assets/1500w.jpg 1500w"
+			sizes="100vw"
+		/>
+		<h1>Home Office</h1>
+	</body>
+</html>

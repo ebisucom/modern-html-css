@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<style>
+			html {
+				scrollbar-color: orange black;
+			}
+
+			[popover] {
+				scrollbar-width: thin;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: orange;
+			}
+			::-webkit-scrollbar-track {
+				background: black;
+			}
+			::-webkit-scrollbar {
+				max-width: 10px;
+				max-height: 10px;
+			}
+
+			/* base */
+			@layer base {
+				* {
+					box-sizing: border-box;
+				}
+				body {
+					margin: 0;
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+
+				section {
+					color: #fff;
+					background-color: #666;
+					font-weight: bold;
+					font-size: 40px;
+					text-align: center;
+					box-sizing: border-box;
+					height: 200px;
+					margin: 10px;
+					text-align: center;
+				}
+
+				.boxA {
+					background: #f3c90b;
+				}
+				.boxB {
+					background: #ff8e52;
+				}
+				.boxC {
+					background: #fda8ec;
+				}
+				.boxD {
+					background: #6cddff;
+				}
+				.boxE {
+					background: #5ca8ee;
+				}
+
+				[popover] {
+					width: min(80vw, 400px);
+					height: 200px;
+					padding: 20px 32px;
+					box-shadow: 0 4px 20px rgb(0 0 0 / 0.3);
+				}
+
+				[popovertargetaction="hide"] {
+					position: absolute;
+					top: 12px;
+					right: 12px;
+					filter: grayscale(1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div popover="manual" id="message">
+			<h2>お知らせ</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vestibulum quam vitae dolor tristique, vitae viverra urna ullamcorper. Sed rhoncus luctus nisi, at pharetra
+				ex placerat et. Etiam a eleifend massa. Cras dapibus auctor eros. Ut massa lorem, ultrices sit amet egestas vel, convallis sed ligula. Nulla viverra, nisl eget maximus
+				sodales, eros nibh ullamcorper turpis, vel blandit odio magna non lectus. Sed cursus lectus vel lectus bibendum rutrum. Sed eget magna auctor, dictum leo in, faucibus nibh.
+				Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+			</p>
+			<button popovertarget="message" popovertargetaction="hide" aria-label="閉じる">
+				<span aria-hidden="true">❌️</span>
+			</button>
+		</div>
+
+		<main>
+			<section id="A" class="boxA">A</section>
+			<section id="B" class="boxB">B</section>
+			<section id="C" class="boxC">C</section>
+			<section id="D" class="boxD">D</section>
+			<section id="E" class="boxE">E</section>
+		</main>
+
+		<script>
+			document.querySelector("#message").showPopover()
+		</script>
+	</body>
+</html>

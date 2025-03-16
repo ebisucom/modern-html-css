@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../assets/viewtransition.css" />
+		<script src="script.js" defer></script>
+		<style>
+			/* 詳細の画像に遷移名を指定 */
+			article img {
+				view-transition-name: photo;
+			}
+
+			/* 一覧のカードに遷移名を指定 */
+			.card:nth-child(1) {
+				view-transition-name: card01;
+			}
+
+			.card:nth-child(2) {
+				view-transition-name: card02;
+			}
+
+			.card:nth-child(3) {
+				view-transition-name: card03;
+			}
+
+			.card:nth-child(4) {
+				view-transition-name: card04;
+			}
+
+			/* 一覧のカードにビュー遷移クラスを指定 */
+			.card {
+				view-transition-class: card;
+			}
+
+			/* 遷移クラス「card」を持つ古い状態の遷移擬似要素にCSSを適用 */
+			html::view-transition-old(*.card) {
+				filter: grayscale(1);
+				animation-name: scale-down;
+			}
+
+			/* 遷移クラス「card」を持つ新しい状態の遷移擬似要素にCSSを適用 */
+			html::view-transition-new(*.card) {
+				filter: grayscale(1);
+				animation-name: scale-up;
+			}
+
+			@keyframes scale-down {
+				100% {
+					scale: 0;
+				}
+			}
+
+			@keyframes scale-up {
+				0% {
+					scale: 0;
+				}
+			}
+
+			/* 遷移する画像は手前に表示 */
+			html::view-transition-group(photo) {
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 一覧 -->
+		<div id="cards">
+			<button class="card" data-id="photo01">
+				<img src="../assets/photo01.jpg" alt="photo01" />
+				<h2>photo01</h2>
+			</button>
+			<button class="card" data-id="photo02">
+				<img src="../assets/photo02.jpg" alt="photo02" />
+				<h2>photo02</h2>
+			</button>
+			<button class="card" data-id="photo03">
+				<img src="../assets/photo03.jpg" alt="photo03" />
+				<h2>photo03</h2>
+			</button>
+			<button class="card" data-id="photo04">
+				<img src="../assets/photo04.jpg" alt="photo04" />
+				<h2>photo04</h2>
+			</button>
+		</div>
+
+		<!-- 詳細 -->
+		<div id="articles">
+			<article id="photo01" hidden>
+				<img src="../assets/photo01.jpg" alt="" />
+				<h1>photo01</h1>
+				<p>オフィスの環境作りから、仕事も遊びもトータルでサポートします</p>
+				<button class="back">戻る</button>
+			</article>
+
+			<article id="photo02" hidden>
+				<img src="../assets/photo02.jpg" alt="" />
+				<h1>photo02</h1>
+				<p>オフィスの環境作りから、仕事も遊びもトータルでサポートします</p>
+				<button class="back">戻る</button>
+			</article>
+
+			<article id="photo03" hidden>
+				<img src="../assets/photo03.jpg" alt="" />
+				<h1>photo03</h1>
+				<p>オフィスの環境作りから、仕事も遊びもトータルでサポートします</p>
+				<button class="back">戻る</button>
+			</article>
+
+			<article id="photo04" hidden>
+				<img src="../assets/photo04.jpg" alt="" />
+				<h1>photo04</h1>
+				<p>オフィスの環境作りから、仕事も遊びもトータルでサポートします</p>
+				<button class="back">戻る</button>
+			</article>
+		</div>
+	</body>
+</html>

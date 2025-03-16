@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			h1.s01 {
+				cursor: default;
+			}
+
+			h1.s02 {
+				cursor: pointer;
+			}
+
+			h1.s03 {
+				cursor: url(assets/cursor.png) 0 0, pointer;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 40px;
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+				h1 {
+					background: #d2f36d;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="s01">Home</h1>
+		<h1 class="s02">Home</h1>
+		<h1 class="s03">Home</h1>
+	</body>
+</html>

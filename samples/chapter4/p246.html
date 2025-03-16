@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<style>
+			.left {
+				img {
+					float: left;
+				}
+			}
+
+			.right {
+				img {
+					float: right;
+				}
+			}
+
+			.clear {
+				img {
+					float: left;
+				}
+
+				p:nth-child(2 of p) {
+					clear: both;
+				}
+			}
+
+			/* base */
+			@layer base {
+				div {
+					display: block flow-root;
+				}
+
+				img {
+					width: 100px;
+					height: 100px;
+					object-fit: cover;
+				}
+
+				p {
+					margin-top: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="left">
+			<img src="assets/office.jpg" alt="" />
+
+			<p>ホームオフィスはあなたの職業生活の中心となります。</p>
+
+			<p>
+				適切にデザインされた作業空間は単なる生活空間の一角ではなく、生産性、快適性、そして全体的な仕事の満足度に重要な役割を果たします。
+			</p>
+		</div>
+
+		<hr />
+
+		<div class="right">
+			<img src="assets/office.jpg" alt="" />
+
+			<p>ホームオフィスはあなたの職業生活の中心となります。</p>
+
+			<p>
+				適切にデザインされた作業空間は単なる生活空間の一角ではなく、生産性、快適性、そして全体的な仕事の満足度に重要な役割を果たします。
+			</p>
+		</div>
+
+		<hr />
+
+		<div class="clear">
+			<img src="assets/office.jpg" alt="" />
+
+			<p>ホームオフィスはあなたの職業生活の中心となります。</p>
+
+			<p>
+				適切にデザインされた作業空間は単なる生活空間の一角ではなく、生産性、快適性、そして全体的な仕事の満足度に重要な役割を果たします。
+			</p>
+		</div>
+	</body>
+</html>

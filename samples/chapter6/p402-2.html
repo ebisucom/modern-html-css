@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+		<style>
+			h1.s01 {
+				box-shadow: 30px 20px lightgray;
+				border-radius: 5px;
+			}
+
+			h1.s02 {
+				box-shadow: 30px 20px 20px lightgray;
+				border-radius: 5px;
+			}
+
+			h1.s03 {
+				box-shadow: 30px 20px 20px 15px lightgray;
+				border-radius: 5px;
+			}
+
+			h1.s04 {
+				box-shadow: 5px 5px 10px black inset;
+				border-radius: 5px;
+			}
+
+			h1.s05 {
+				box-shadow: 10px 10px 20px orange, 30px 20px 20px yellow;
+				border-radius: 5px;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 120px;
+					margin: 30px 100px;
+					color: #333;
+					font-family: "Prompt", "メイリオ", sans-serif;
+				}
+				h1 {
+					padding: 25px;
+					border: solid 1px black;
+					background: lemonchiffon;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="s01">HOME OFFICE</h1>
+
+		<h1 class="s02">HOME OFFICE</h1>
+
+		<h1 class="s03">HOME OFFICE</h1>
+
+		<h1 class="s04">HOME OFFICE</h1>
+
+		<h1 class="s05">HOME OFFICE</h1>
+	</body>
+</html>

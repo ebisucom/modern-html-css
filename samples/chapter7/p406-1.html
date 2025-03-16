@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			div {
+				touch-action: none;
+			}
+
+			/* base */
+			@layer {
+				div {
+					background: pink;
+					max-width: 500px;
+					height: 300px;
+					margin-inline: auto;
+				}
+
+				body {
+					margin-block: 300px 1000px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div>ここでのパンやズームの操作は不可</div>
+	</body>
+</html>

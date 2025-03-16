@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				h1 {
+					width: 300px;
+					height: 100px;
+					margin: 20px;
+					padding: 20px;
+					border: solid 20px gold;
+					background: #8df3ff;
+				}
+			}
+
+			.s02 {
+				h1 {
+					width: 300px;
+					height: 100px;
+					margin: 20px;
+					padding: 20px;
+					border: solid 20px gold;
+					background: #8df3ff;
+					box-sizing: border-box;
+				}
+			}
+
+			.s03 {
+				h1 {
+					width: 300px;
+					height: 100px;
+					margin: 40px;
+					padding: 20px;
+					border: solid 20px gold;
+					background: #8df3ff;
+					box-sizing: border-box;
+				}
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<h1>Home Office</h1>
+		</div>
+
+		<div class="s02">
+			<h1>Home Office</h1>
+		</div>
+
+		<div class="s03">
+			<h1>Home Office</h1>
+		</div>
+	</body>
+</html>

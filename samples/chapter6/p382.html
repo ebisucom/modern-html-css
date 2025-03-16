@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			div {
+				-webkit-print-color-adjust: exact;
+				print-color-adjust: exact;
+				background-image: repeating-linear-gradient(-45deg, #666 0 5px, #333 5px 10px);
+			}
+
+			h1 {
+				color: red;
+				background-color: yellow;
+			}
+
+			h1.opacity {
+				opacity: 0.6;
+			}
+
+			/* base */
+			@layer base {
+				div {
+					display: grid;
+					gap: 60px;
+					padding: 50px;
+					background-size: 100vw 100vh;
+					font-family: Prompt, sans-serif;
+				}
+
+				h1 {
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>Danger!</h1>
+			<h1 class="opacity">Danger!</h1>
+		</div>
+	</body>
+</html>

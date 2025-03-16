@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.overflow01 {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: clip;
+			}
+
+			.overflow02 {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.overflow03 {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: "→";
+			}
+
+			.overflow04 {
+				white-space: nowrap;
+				overflow: auto;
+				text-overflow: ellipsis "→";
+			}
+
+			/* base */
+			@layer base {
+				p {
+					width: 247.5px;
+					margin-bottom: 20px;
+					border: solid 4px pink;
+					font-size: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="overflow01">家でリラックスしながら仕事をする。</p>
+		<p class="overflow02">家でリラックスしながら仕事をする。</p>
+		<p class="overflow03">家でリラックスしながら仕事をする。</p>
+		<p class="overflow04">家でリラックスしながら仕事をする。</p>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- 回転の中心を指定 -->
+  <g transform="rotate(30, 0, 0)">
+    <!-- 線を描画 -->
+    <line x1="0" y1="0" x2="800" y2="0" stroke="#aaa" stroke-width="2" />
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<style>
+			div {
+				scroll-snap-type: y mandatory;
+				overflow: auto;
+				height: 200px;
+				border: solid 10px #abcf3e;
+			}
+
+			section {
+				scroll-snap-align: start;
+				scroll-snap-stop: always;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+
+				.container section {
+					color: #fff;
+					font-weight: bold;
+					font-size: 40px;
+					text-align: center;
+					box-sizing: border-box;
+					height: 150px;
+					margin: 30px;
+				}
+
+				.boxA {
+					background: #f3c90b;
+				}
+				.boxB {
+					background: #ff8e52;
+				}
+				.boxC {
+					background: #fda8ec;
+				}
+				.boxD {
+					background: #6cddff;
+				}
+				.boxE {
+					background: #5ca8ee;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<section class="boxA">A</section>
+			<section class="boxB">B</section>
+			<section class="boxC">C</section>
+			<section class="boxD">D</section>
+			<section class="boxE">E</section>
+		</div>
+	</body>
+</html>

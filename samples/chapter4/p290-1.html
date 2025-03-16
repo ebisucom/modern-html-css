@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+		<style>
+			button {
+				anchor-name: --help-anchor;
+			}
+
+			div {
+				position-anchor: --help-anchor;
+				position: fixed;
+				bottom: anchor(top);
+				right: anchor(right);
+			}
+
+			/* base */
+			@layer base {
+				body {
+					padding-top: 120px;
+					padding-bottom: 1000px;
+					box-sizing: border-box;
+				}
+
+				button {
+					justify-self: center;
+					margin-inline: auto;
+					display: grid;
+					place-items: center;
+					width: 32px;
+					height: 32px;
+					padding: 0;
+					color: black;
+					font-size: 24px;
+					font-family: Outfit, sans-serif;
+					line-height: 1;
+					background-color: gold;
+					border: solid 2px black;
+					border-radius: 50%;
+					cursor: pointer;
+					-webkit-tap-highlight-color: transparent;
+				}
+
+				div {
+					max-width: 13em;
+					padding: 1em;
+					color: white;
+					background: black;
+					border: none;
+					border-radius: 0.5em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<button aria-label="ヘルプを開く">
+			<span aria-hidden="true">?</span>
+		</button>
+
+		<div>ご不明な点がございましたらヘルプデスクまでお気軽にお問い合わせください</div>
+	</body>
+</html>

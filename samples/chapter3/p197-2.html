@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			@property --primary {
+				syntax: "<color>";
+				inherits: false;
+				initial-value: gold;
+			}
+
+			@property --bar {
+				syntax: "<percentage>";
+				inherits: false;
+				initial-value: 8%;
+			}
+
+			button {
+				background-image: linear-gradient(to right, var(--primary) var(--bar), white var(--bar));
+				transition: --bar 0.2s ease-in-out;
+
+				&:hover {
+					--bar: 100%;
+				}
+			}
+
+			/* base */
+			@layer base {
+				button {
+					padding: 8px 32px;
+					cursor: pointer;
+					background: none;
+					border-radius: 8px;
+					border: solid 2px var(--primary);
+					font-weight: bold;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<button class="btn">今すぐはじめる</button>
+	</body>
+</html>

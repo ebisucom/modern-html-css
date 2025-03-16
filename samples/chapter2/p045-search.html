@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			search {
+				form {
+					display: grid;
+					grid-template-columns: auto 1fr;
+					gap: 8px;
+					align-items: center;
+
+					> button {
+						grid-column: 1;
+						grid-row: 1;
+					}
+
+					> input {
+						grid-column: 1 / -1;
+						grid-row: 1;
+						padding-left: 48px;
+					}
+				}
+			}
+
+			/* base */
+			@layer base {
+				body {
+					padding: 10vw;
+				}
+
+				input {
+					padding: 12px;
+					background-color: white;
+					background-image: none;
+					border: solid 2px #888;
+					border-radius: 4px;
+					font-family: inherit;
+					font-size: 100%;
+				}
+
+				button {
+					padding: 12px;
+					font: unset;
+					color: inherit;
+					text-align: left;
+					cursor: pointer;
+					background: none;
+					border: none;
+
+					> svg {
+						vertical-align: bottom;
+					}
+				}
+
+				.sr-only {
+					position: absolute;
+					overflow: hidden;
+					width: 1px;
+					height: 1px;
+					margin: -1px;
+					padding: 0;
+					clip: rect(0, 0, 0, 0);
+					white-space: nowrap;
+					border-width: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<search>
+			<form>
+				<label for="search" class="sr-only">検索</label>
+				<input type="search" id="search" placeholder="Search" />
+				<button type="submit" aria-label="検索する">
+					<svg aria-hidden="true" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+					</svg>
+				</button>
+			</form>
+		</search>
+	</body>
+</html>

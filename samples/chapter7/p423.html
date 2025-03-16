@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			a {
+				background-color: #abcf3e;
+				scale: 1;
+				border-style: solid;
+				transition: background-color 0.5s, scale 0.5s, border-style 0.5s allow-discrete;
+
+				/* 個別のプロパティによる指定 */
+				/* transition-property: background-color, scale, border-style; */
+				/* transition-duration: 2s; */
+				/* transition-behavior: allow-discrete; */
+			}
+
+			a:hover {
+				background-color: #f3c90b;
+				scale: 1.2;
+				border-style: dashed;
+			}
+
+			/* base */
+			@layer base {
+				a {
+					border-width: 8px;
+					border-color: green;
+				}
+
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+					margin: 100px 30px;
+					text-align: center;
+				}
+
+				a {
+					display: inline-block;
+					-webkit-tap-highlight-color: transparent;
+					-webkit-touch-callout: none;
+					width: 120px;
+					height: 120px;
+					border-radius: 50%;
+					margin: auto;
+					color: #fff;
+					font-size: 32px;
+					font-weight: bold;
+					text-align: center;
+					text-decoration: none;
+					display: grid;
+					place-items: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">HOME</a>
+	</body>
+</html>

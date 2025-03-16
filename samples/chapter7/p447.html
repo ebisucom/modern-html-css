@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<style>
+			main {
+				timeline-scope: --scroll-timeline;
+			}
+
+			div {
+				scroll-timeline: --scroll-timeline;
+				scroll-snap-type: y mandatory;
+				overflow: auto;
+				height: 200px;
+				border: solid 10px #abcf3e;
+			}
+
+			span {
+				animation: move-anim linear both;
+				animation-timeline: --scroll-timeline;
+				interpolate-size: allow-keywords;
+				display: block;
+				text-align: right;
+			}
+
+			@keyframes move-anim {
+				0% {
+					width: min-content;
+				}
+				100% {
+					width: 100%;
+				}
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+
+				span {
+					font-size: 50px;
+					font-variant-emoji: emoji;
+				}
+
+				section {
+					scroll-snap-align: start;
+					scroll-snap-stop: always;
+					color: #fff;
+					font-weight: bold;
+					font-size: 40px;
+					text-align: center;
+					box-sizing: border-box;
+					height: 150px;
+					margin: 0 30px 30px 30px;
+				}
+
+				.boxA {
+					background: #f3c90b;
+				}
+				.boxB {
+					background: #ff8e52;
+				}
+				.boxC {
+					background: #fda8ec;
+				}
+				.boxD {
+					background: #6cddff;
+				}
+				.boxE {
+					background: #5ca8ee;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<span>☘</span>
+			<div>
+				<section class="boxA">A</section>
+				<section class="boxB">B</section>
+				<section class="boxC">C</section>
+				<section class="boxD">D</section>
+				<section class="boxE">E</section>
+			</div>
+		</main>
+	</body>
+</html>

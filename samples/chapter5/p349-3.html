@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.h01 {
+				hyphens: auto;
+				hyphenate-limit-chars: 5 2 2;
+			}
+
+			.h02 {
+				hyphens: auto;
+				hyphenate-limit-chars: 5 5 5;
+			}
+
+			/* base */
+			@layer base {
+				div {
+					width: 74px;
+					margin-bottom: 30px;
+					border: solid 6px #abcf3e;
+					font-size: 16px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="h01" lang="en">The worldwide interactive collaboration.</div>
+		<div class="h02" lang="en">The worldwide interactive collaboration.</div>
+	</body>
+</html>

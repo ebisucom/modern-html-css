@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			:root {
+				--method: shorter;
+				--method: longer;
+				--method: increasing;
+				--method: decreasing;
+			}
+
+			.d060 {
+				background-color: color-mix(in lch var(--method) hue, yellow 100%, magenta 0%);
+			}
+
+			.d080 {
+				background-color: color-mix(in lch var(--method) hue, yellow 75%, magenta 25%);
+			}
+
+			.d100 {
+				background-color: color-mix(in lch var(--method) hue, yellow 50%, magenta 50%);
+			}
+
+			.d120 {
+				background-color: color-mix(in lch var(--method) hue, yellow 25%, magenta 75%);
+			}
+
+			.d140 {
+				background-color: color-mix(in lch var(--method) hue, yellow 0%, magenta 100%);
+			}
+
+			/*  */
+			div {
+				width: 100px;
+				height: 100px;
+			}
+
+			body {
+				display: grid;
+				grid-auto-flow: column;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="d060"></div>
+		<div class="d080"></div>
+		<div class="d100"></div>
+		<div class="d120"></div>
+		<div class="d140"></div>
+	</body>
+</html>

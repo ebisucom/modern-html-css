@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+				}
+				label {
+					display: grid;
+					justify-items: start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<label>
+			数値
+			<input type="number" name="数値" />
+		</label>
+
+		<label>
+			大まかな数値（レンジ）
+			<input type="range" name="レンジ" />
+		</label>
+
+		<label>
+			色の値
+			<input type="color" name="色" />
+		</label>
+	</body>
+</html>

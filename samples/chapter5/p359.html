@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+		<style>
+			.s01 {
+				text-decoration: underline;
+				text-decoration-color: red;
+				text-decoration-skip-ink: auto;
+			}
+
+			.s02 {
+				text-decoration: underline;
+				text-decoration-color: red;
+				text-decoration-skip-ink: all;
+			}
+
+			.s03 {
+				text-decoration: underline;
+				text-decoration-color: red;
+				text-decoration-skip-ink: none;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					font-family: "Prompt", sans-serif;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="s01">Happy Holidays</h1>
+		<h1 class="s02">Happy Holidays</h1>
+		<h1 class="s03">Happy Holidays</h1>
+	</body>
+</html>

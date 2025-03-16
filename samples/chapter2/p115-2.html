@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="host">
+			<template shadowrootmode="open" shadowrootclonable>
+				<input placeholder="テキストを入力" />
+			</template>
+		</div>
+
+		<div id="clone"></div>
+
+		<script>
+			// シャドウホストdiv.hostを複製
+			const cloneHost = document.getElementById("host").cloneNode(true)
+
+			// div.cloneに追加
+			document.getElementById("clone").appendChild(cloneHost)
+		</script>
+	</body>
+</html>

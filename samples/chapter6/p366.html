@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			img {
+				width: 320px;
+				height: 100px;
+			}
+
+			.s01 {
+				object-fit: fill;
+			}
+			.s02 {
+				object-fit: none;
+			}
+			.s03 {
+				object-fit: cover;
+			}
+			.s04 {
+				object-fit: contain;
+			}
+			.s05 {
+				object-fit: scale-down;
+			}
+
+			/* base */
+			@layer base {
+				img {
+					border: solid 6px #abcf3e;
+				}
+				.container {
+					display: flex;
+					gap: 30px;
+				}
+				.container > div {
+					width: 360px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="large">
+				<img src="assets/home.jpg" alt="" class="s01" />
+				<img src="assets/home.jpg" alt="" class="s02" />
+				<img src="assets/home.jpg" alt="" class="s03" />
+				<img src="assets/home.jpg" alt="" class="s04" />
+				<img src="assets/home.jpg" alt="" class="s05" />
+			</div>
+
+			<div class="small">
+				<img src="assets/music.jpg" alt="" class="s01" />
+				<img src="assets/music.jpg" alt="" class="s02" />
+				<img src="assets/music.jpg" alt="" class="s03" />
+				<img src="assets/music.jpg" alt="" class="s04" />
+				<img src="assets/music.jpg" alt="" class="s05" />
+			</div>
+		</div>
+	</body>
+</html>

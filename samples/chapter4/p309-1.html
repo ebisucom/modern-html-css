@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				section {
+					display: flex;
+					flex-flow: wrap;
+				}
+			}
+
+			.s02 {
+				section {
+					display: flex;
+					flex-flow: wrap;
+				}
+
+				div:nth-child(2) {
+					visibility: hidden;
+				}
+			}
+
+			section {
+				width: 80vw;
+				height: 80vh;
+			}
+
+			/* base */
+			@layer base, color;
+
+			@layer color {
+				section {
+					border: solid 4px royalblue;
+
+					div:nth-child(1) {
+						font-size: 2em;
+						background-color: yellow;
+					}
+
+					div:nth-child(2) {
+						background-color: orange;
+					}
+
+					div:nth-child(3) {
+						background-color: pink;
+					}
+				}
+			}
+
+			@layer base {
+				section {
+					font-family: outfit, sans-serif;
+					font-weight: bold;
+					margin: 0 auto 40px;
+					max-height: 300px;
+
+					div {
+						text-align: center;
+						padding: 5px;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<section>
+				<div class="item">Home</div>
+				<div class="item">Services</div>
+				<div class="item">Design</div>
+			</section>
+		</div>
+
+		<div class="s02">
+			<section>
+				<div class="item">Home</div>
+				<div class="item">Services</div>
+				<div class="item">Design</div>
+			</section>
+		</div>
+	</body>
+</html>

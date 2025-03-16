@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s02 {
+				main,
+				div {
+					counter-reset: item;
+				}
+
+				h2::before,
+				h3::before {
+					content: counter(item);
+					counter-increment: item;
+				}
+			}
+
+			.s03 {
+				main,
+				div {
+					counter-reset: item;
+				}
+
+				h2::before,
+				h3::before {
+					content: counters(item, ".");
+					counter-increment: item;
+				}
+			}
+
+			.s04 {
+				main {
+					counter-reset: item;
+				}
+
+				h2::before {
+					content: counter(item);
+					counter-increment: item;
+				}
+
+				h2:nth-child(2)::before {
+					counter-set: item 5;
+				}
+			}
+
+			/* base */
+			@layer base {
+				h2,
+				h3 {
+					margin: 0;
+
+					&::before,
+					&::after {
+						color: red;
+					}
+				}
+				h3 {
+					margin-left: 30px;
+				}
+
+				body {
+					display: grid;
+					gap: 40px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s02">
+			<main>
+				<h2>沖縄</h2>
+				<h2>北海道</h2>
+				<div>
+					<h3>人口</h3>
+					<h3>面積</h3>
+				</div>
+				<h2>京都</h2>
+			</main>
+		</div>
+
+		<div class="s03">
+			<main>
+				<h2>沖縄</h2>
+				<h2>北海道</h2>
+				<div>
+					<h3>人口</h3>
+					<h3>面積</h3>
+				</div>
+				<h2>京都</h2>
+			</main>
+		</div>
+
+		<div class="s04">
+			<main>
+				<h2>沖縄</h2>
+				<h2>北海道</h2>
+				<h2>京都</h2>
+			</main>
+		</div>
+	</body>
+</html>

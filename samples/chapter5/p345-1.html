@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.style01 {
+				text-wrap-style: auto;
+			}
+
+			.style02 {
+				text-wrap-style: stable;
+			}
+
+			.style03 {
+				text-wrap-style: balance;
+			}
+
+			.style04 {
+				text-wrap-style: pretty;
+			}
+
+			/* base */
+			@layer base {
+				div {
+					margin-bottom: 20px;
+					border: solid 4px pink;
+					font-size: 20px;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="style01">My favorite sandwich with fresh tomato and ham!</div>
+
+		<div class="style02">My favorite sandwich with fresh tomato and ham!</div>
+
+		<div class="style03">My favorite sandwich with fresh tomato and ham!</div>
+
+		<div class="style04">My favorite sandwich with fresh tomato and ham!</div>
+	</body>
+</html>

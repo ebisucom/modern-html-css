@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			p {
+				font-family: "YuGothic Medium", YuGothic, "Yu Gothic Medium", "Yu Gothic";
+			}
+
+			.custom {
+				font-variant-east-asian: jis78;
+			}
+
+			/* base */
+			@layer base {
+				p {
+					font-size: 50px;
+					color: red;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="default">壷と壺、桧と檜、篭と籠など</p>
+		<p class="custom">壷と壺、桧と檜、篭と籠など</p>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			video:picture-in-picture {
+				border: solid 20px yellow;
+			}
+
+			/* base */
+			@layer base {
+				* {
+					box-sizing: border-box;
+				}
+				body {
+					display: grid;
+					gap: 20px;
+				}
+				video {
+					width: 100%;
+					height: auto;
+				}
+				button {
+					padding: 8px 32px;
+					border: solid 1px gray;
+					border-radius: 8px;
+					color: black;
+					cursor: pointer;
+					background-color: white;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<video src="assets/home.mp4" controls autoplay loop muted playsinline width="640" height="360"></video>
+
+		<button type="button">ピクチャインピクチャで表示</button>
+
+		<script>
+			document.querySelector("button").addEventListener("click", function () {
+				document.querySelector("video").requestPictureInPicture()
+			})
+		</script>
+	</body>
+</html>

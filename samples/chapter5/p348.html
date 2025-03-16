@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<style>
+			.line01 {
+				line-break: auto;
+			}
+			.line02 {
+				line-break: loose;
+			}
+			.line03 {
+				line-break: normal;
+			}
+			.line04 {
+				line-break: strict;
+			}
+			.line05 {
+				line-break: anywhere;
+			}
+
+			/* base */
+			@layer base {
+				div {
+					margin-bottom: 30px;
+					border: solid 6px #abcf3e;
+					font-size: 16px;
+					width: 172px;
+					text-align: justify;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="line01">ホームオフィスでリラックスして過ごしつつ、メールで届いた個々のチャットに返信しました。</div>
+		<div class="line02">ホームオフィスでリラックスして過ごしつつ、メールで届いた個々のチャットに返信しました。</div>
+		<div class="line03">ホームオフィスでリラックスして過ごしつつ、メールで届いた個々のチャットに返信しました。</div>
+		<div class="line04">ホームオフィスでリラックスして過ごしつつ、メールで届いた個々のチャットに返信しました。</div>
+		<div class="line05">ホームオフィスでリラックスして過ごしつつ、メールで届いた個々のチャットに返信しました。</div>
+	</body>
+</html>

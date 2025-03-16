@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			select,
+			::picker(select) {
+				appearance: base-select;
+			}
+
+			::picker(select) {
+				width: 10em;
+			}
+
+			option {
+				padding: 5px 10px;
+			}
+
+			option:checked {
+				background: pink;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 40px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<select name="fruits">
+			<option value="orange">オレンジ</option>
+			<option value="banana" selected>バナナ</option>
+			<option value="apple">林檎</option>
+		</select>
+	</body>
+</html>

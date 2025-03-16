@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 :nth-child(2) {
+				background-color: pink;
+			}
+
+			.s02 :nth-last-child(2) {
+				background-color: pink;
+			}
+
+			.s03 :first-child {
+				background-color: pink;
+			}
+
+			.s04 :last-child {
+				background-color: pink;
+			}
+
+			.s05 :only-child {
+				background-color: pink;
+			}
+
+			.s06 :nth-of-type(2) {
+				background-color: pink;
+			}
+
+			.s07 :nth-last-of-type(2) {
+				background-color: pink;
+			}
+
+			.s08 :first-of-type {
+				background-color: pink;
+			}
+
+			.s09 :last-of-type {
+				background-color: pink;
+			}
+
+			.s10 :only-of-type {
+				background-color: pink;
+			}
+
+			.s11 :nth-child(2 of .new) {
+				background-color: pink;
+			}
+
+			.s12 :nth-child(3n + 2) {
+				background-color: pink;
+			}
+
+			.s13 :nth-child(odd) {
+				background-color: pink;
+			}
+
+			.s14 :nth-child(even) {
+				background-color: pink;
+			}
+
+			.s15 :nth-child(n + 3):nth-child(-n + 5) {
+				background-color: pink;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 24px;
+				}
+				div {
+					display: flex;
+					gap: 8px;
+				}
+				h2,
+				p {
+					width: 4em;
+					margin: 0;
+					border: solid 1px gray;
+					border-radius: 16px;
+					font-size: 14px;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s02">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s03">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s04">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s05">
+			<p>p</p>
+		</div>
+
+		<div class="s06">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s07">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s08">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s09">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s10">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+		</div>
+
+		<div class="s11">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s12">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s13">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s14">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+
+		<div class="s15">
+			<h2>h2</h2>
+			<p class="new">p.new</p>
+			<p>p</p>
+			<h2>h2</h2>
+			<p>p</p>
+			<p class="new">p.new</p>
+		</div>
+	</body>
+</html>

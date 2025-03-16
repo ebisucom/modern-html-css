@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		p {
+			border: solid 4px pink;
+			text-decoration: underline;
+		}
+
+		.w01 { white-space: normal; }
+		.w02 { white-space: nowrap; }
+		.w03 { white-space: pre-wrap; }
+		.w04 { white-space: pre; }
+		.w05 { white-space: break-spaces; }
+		.w06 { white-space: break-spaces nowrap; }
+		.w07 { white-space: pre-line; }
+		.w08 { white-space: preserve-breaks nowrap; }
+		.w09 { white-space: preserve-spaces; }
+		.w10 { white-space: preserve-spaces nowrap; } 
+
+
+		/* base */
+		@layer base {
+			body {
+				margin: 20px;
+			}
+			p {
+				margin: 0 0 20px 0;
+				font-size: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+<p class="w01"> Professional   Home   
+	Office  </p>
+<p class="w02"> Professional   Home   
+	Office  </p>
+<p class="w03"> Professional   Home   
+	Office  </p>
+<p class="w04"> Professional   Home   
+	Office  </p>
+<p class="w05"> Professional   Home   
+	Office  </p>
+<p class="w06"> Professional   Home   
+	Office  </p>
+<p class="w07"> Professional   Home   
+	Office  </p>
+<p class="w08"> Professional   Home   
+	Office  </p>
+<p class="w09"> Professional   Home   
+	Office  </p>
+<p class="w10"> Professional   Home   
+	Office  </p>
+</body>
+</html>

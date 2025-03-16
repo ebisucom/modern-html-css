@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+		<style>
+			.s01 {
+				button {
+					anchor-name: --anchor01;
+				}
+
+				div {
+					position: fixed;
+					position-anchor: --anchor01;
+					position-area: top;
+					position-visibility: always;
+				}
+			}
+
+			.s02 {
+				button {
+					anchor-name: --anchor02;
+				}
+
+				div {
+					position: fixed;
+					position-anchor: --anchor02;
+					position-area: top;
+					position-visibility: anchors-visible;
+				}
+			}
+
+			.s03 {
+				button {
+					anchor-name: --anchor03;
+				}
+
+				div {
+					position: fixed;
+					position-anchor: --anchor03;
+					position-area: top;
+					position-visibility: no-overflow;
+				}
+			}
+
+			/* base */
+			@layer base {
+				h1 {
+					text-align: center;
+				}
+				.container {
+					display: grid;
+					grid-template-columns: repeat(3, 16em);
+					gap: 20px;
+					justify-content: center;
+					padding-top: 1000px;
+					padding-bottom: 1000px;
+				}
+
+				button {
+					justify-self: center;
+					margin-inline: auto;
+					display: grid;
+					place-items: center;
+					width: 32px;
+					height: 32px;
+					padding: 0;
+					color: black;
+					font-size: 24px;
+					font-family: Outfit, sans-serif;
+					line-height: 1;
+					background-color: gold;
+					border: solid 2px black;
+					border-radius: 50%;
+					cursor: pointer;
+					-webkit-tap-highlight-color: transparent;
+				}
+
+				.help {
+					max-width: 13em;
+					margin: 2px;
+					padding: 1em;
+					color: white;
+					background: black;
+					border: none;
+					border-radius: 0.5em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>スクロール<br />↓</h1>
+		<div class="container">
+			<div class="s01">
+				<button aria-label="ヘルプを開く">
+					<span aria-hidden="true">?</span>
+				</button>
+				<div class="help">ご不明な点がございましたらヘルプデスクまでお気軽にお問い合わせください</div>
+			</div>
+
+			<div class="s02">
+				<button aria-label="ヘルプを開く">
+					<span aria-hidden="true">?</span>
+				</button>
+				<div class="help">ご不明な点がございましたらヘルプデスクまでお気軽にお問い合わせください</div>
+			</div>
+
+			<div class="s03">
+				<button aria-label="ヘルプを開く">
+					<span aria-hidden="true">?</span>
+				</button>
+				<div class="help">ご不明な点がございましたらヘルプデスクまでお気軽にお問い合わせください</div>
+			</div>
+		</div>
+	</body>
+</html>

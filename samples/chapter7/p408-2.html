@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			textarea.s01 {
+				field-sizing: fixed;
+				width: 200px;
+				min-height: 2lh;
+			}
+
+			textarea.s02 {
+				field-sizing: content;
+				width: 200px;
+				min-height: 2lh;
+			}
+
+			select.s01 {
+				field-sizing: fixed;
+			}
+
+			select.s02 {
+				field-sizing: content;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 60px;
+					justify-items: left;
+				}
+
+				textarea {
+					padding: 8px;
+					font-size: inherit;
+					line-height: 1.5;
+				}
+
+				select {
+					padding: 5px;
+					font-size: inherit;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<textarea class="s01"></textarea>
+		<textarea class="s02"></textarea>
+
+		<hr />
+
+		<select name="fruits" class="s01">
+			<option value="orange" selected>オレンジ</option>
+			<option value="banana">バナナ</option>
+			<option value="apple">林檎</option>
+		</select>
+
+		<select name="fruits" class="s02">
+			<option value="orange" selected>オレンジ</option>
+			<option value="banana">バナナ</option>
+			<option value="apple">林檎</option>
+		</select>
+	</body>
+</html>

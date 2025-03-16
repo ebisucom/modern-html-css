@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			div.s01 {
+				background-image: linear-gradient(to top, limegreen 0%, yellow 50%, orange 100%);
+			}
+
+			div.s02 {
+				background-image: linear-gradient(to right, limegreen 0%, yellow 50%, orange 100%);
+			}
+			div.s03 {
+				background-image: linear-gradient(to bottom, limegreen 0%, yellow 50%, orange 100%);
+			}
+			div.s04 {
+				background-image: linear-gradient(to left, limegreen 0%, yellow 50%, orange 100%);
+			}
+			div.s05 {
+				background-image: linear-gradient(to top right, limegreen 0%, yellow 50%, orange 100%);
+			}
+			div.repeating-linear-gradient {
+				background-image: repeating-linear-gradient(to top, limegreen 0%, yellow 25%, orange 50%);
+			}
+
+			div.s06 {
+				background-image: radial-gradient(circle 50px at 50% 50%, limegreen 0%, yellow 50%, orange 100%);
+
+				background-image: radial-gradient(circle 50px, limegreen 0%, yellow 50%, orange 100%);
+			}
+			div.s07 {
+				background-image: radial-gradient(ellipse 100px 50px at 50% 50%, limegreen 0%, yellow 50%, orange 100%);
+			}
+			div.repeating-radial-gradient {
+				background-image: repeating-radial-gradient(circle 50px at 50% 50%, limegreen 0%, yellow 50%, orange 100%);
+			}
+
+			div.s08 {
+				background-image: conic-gradient(from 90deg at 50% 50%, limegreen 0deg, yellow 180deg, orange 360deg);
+			}
+
+			div.repeating-conic-gradient {
+				background-image: repeating-conic-gradient(from 90deg at 50% 50%, limegreen 0deg, yellow 15deg, orange 30deg);
+			}
+
+			div.s12 {
+				background-image: conic-gradient(from 90deg at 50% 50% in lch shorter hue, limegreen 0deg, yellow 180deg, orange 360deg);
+			}
+
+			div.s13 {
+				background-image: conic-gradient(in lch longer hue from 90deg at 50% 50%, limegreen 0deg, yellow 180deg, orange 360deg);
+			}
+
+			/* base */
+			@layer base {
+				div {
+					width: 320px;
+					height: 100px;
+					margin: 30px auto;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01"></div>
+		<div class="s02"></div>
+		<div class="s03"></div>
+		<div class="s04"></div>
+		<div class="s05"></div>
+		<div class="repeating-linear-gradient"></div>
+
+		<div class="s06"></div>
+		<div class="s07"></div>
+		<div class="repeating-radial-gradient"></div>
+
+		<div class="s08"></div>
+		<div class="repeating-conic-gradient"></div>
+
+		<div class="s12"></div>
+		<div class="s13"></div>
+	</body>
+</html>

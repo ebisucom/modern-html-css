@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+		<style>
+			p {
+				font-family: "Noto Sans JP", sans-serif;
+				font-size: 50px;
+				line-height: 2;
+				border: solid 2px royalblue;
+			}
+
+			span {
+				background-color: yellow;
+				mix-blend-mode: multiply;
+			}
+
+			/* base */
+			@layer base {
+			}
+		</style>
+	</head>
+	<body>
+		<p style="text-box-trim: none">
+			<span> Design デザイン </span>
+		</p>
+
+		<p style="text-box-trim: trim-both; text-box-edge: leading">
+			<span> Design デザイン </span>
+		</p>
+
+		<p style="text-box-trim: trim-both; text-box-edge: text">
+			<span> Design デザイン </span>
+		</p>
+
+		<p style="text-box-trim: trim-both; text-box-edge: cap alphabetic">
+			<span> Design デザイン </span>
+		</p>
+
+		<p style="text-box-trim: trim-both; text-box-edge: ex alphabetic">
+			<span> Design デザイン </span>
+		</p>
+	</body>
+</html>

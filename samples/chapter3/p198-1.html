@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@media (any-hover: hover) {
+				button:hover {
+					background-color: yellow;
+				}
+			}
+
+			/* base */
+			@layer base {
+				:root {
+					-webkit-tap-highlight-color: transparent;
+				}
+				button {
+					display: grid;
+					place-items: center;
+					width: 48px;
+					height: 48px;
+					cursor: pointer;
+					color: black;
+					background-color: white;
+					border: solid 1px gray;
+					border-radius: 50%;
+					font-weight: bold;
+				}
+
+				body {
+					margin: 16px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<button aria-label="次へ進む">
+			<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+			</svg>
+		</button>
+	</body>
+</html>

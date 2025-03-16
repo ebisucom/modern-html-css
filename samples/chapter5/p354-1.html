@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.t01 {
+				text-spacing-trim: space-all;
+			}
+
+			.t02 {
+				text-spacing-trim: normal;
+			}
+
+			.t03 {
+				text-spacing-trim: space-first;
+			}
+
+			.t04 {
+				text-spacing-trim: trim-start;
+			}
+
+			/* base */
+			@layer base {
+				p {
+					width: 343px;
+					font-family: "YuGothic Medium", YuGothic, "Yu Gothic Medium", "Yu Gothic", sans-serif;
+					font-size: 40px;
+					border: solid 4px pink;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="t01">「あ」・「か」、「さ」（たな）。</p>
+		<p class="t02">「あ」・「か」、「さ」（たな）。</p>
+		<p class="t03">「あ」・「か」、「さ」（たな）。</p>
+		<p class="t04">「あ」・「か」、「さ」（たな）。</p>
+	</body>
+</html>

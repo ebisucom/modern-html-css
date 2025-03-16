@@ -1,0 +1,783 @@
+@charset "UTF-8";
+
+@layer reset, base;
+
+/* ------------------------------------------------------ */
+
+/* リセット */
+
+/* ------------------------------------------------------ */
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: inherit;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	svg,
+	img {
+		vertical-align: bottom;
+	}
+
+	button,
+	input,
+	textarea {
+		margin: 0;
+		font-family: inherit;
+		font-size: 100%;
+		font-weight: inherit;
+		color: inherit;
+		background-color: transparent;
+		background-image: none;
+	}
+
+	button,
+	input[type="submit"] {
+		cursor: pointer;
+		border: none;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* 基本スタイル */
+
+/* ------------------------------------------------------ */
+
+@layer base {
+	/* カスタムプロパティ */
+	:root {
+		/* カラー */
+		--black: #222;
+		--white: light-dark(#fff, #eee);
+		--text: light-dark(var(--black), var(--white));
+		--background: light-dark(var(--white), var(--black));
+		--primary: #9000ff;
+		--attention: red;
+		--gray: light-dark(#efefef, #2d2d2d);
+		--darkgray: light-dark(#707070, #909090);
+
+		/* ページの左右の余白（画面幅1440pxで64px） */
+		--page-padding: max(16px, 4.4vw);
+
+		/* 欧文フォント */
+		--latin-font: "Outfit", "Outfit Fallback", sans-serif;
+	}
+
+	/* 代替フォント */
+	@font-face {
+		font-family: "Outfit Fallback";
+		src: local("Arial"), local("ArialMT");
+		size-adjust: 99.8204%;
+		ascent-override: 100.18%;
+		descent-override: 26.0468%;
+		line-gap-override: 0%;
+	}
+
+	/* カラースキーム */
+	:root {
+		color-scheme: light dark;
+	}
+
+	/* スムーススクロール */
+	:root {
+		scroll-behavior: smooth;
+	}
+
+	/* ページ */
+	body {
+		font-family: sans-serif;
+		font-size: clamp(15px, 1.4vw, 24px); /* 画面幅1440pxで20px */
+		line-height: 1.8;
+		color: var(--text);
+		background-color: var(--background);
+	}
+
+	/* 画像 */
+	img {
+		object-fit: cover;
+		border-radius: 8px;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* ビュー遷移 */
+
+/* ------------------------------------------------------ */
+
+@media (prefers-reduced-motion: no-preference) {
+	@view-transition {
+		navigation: auto;
+	}
+
+	.post img {
+		view-transition-name: photo;
+	}
+
+	html::view-transition-old(photo),
+	html::view-transition-new(photo) {
+		overflow: clip;
+		height: 100%;
+		border-radius: 8px;
+		animation-duration: 0.5s;
+		object-fit: cover;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* ページヘッダー */
+
+/* ------------------------------------------------------ */
+
+body > header {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-auto-flow: column;
+	align-items: center;
+	padding-block: 1em;
+	padding-inline: var(--page-padding);
+
+	.logo svg {
+		width: 2.5em;
+		height: auto;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* ナビゲーションメニュー */
+
+/* ------------------------------------------------------ */
+
+.menu {
+	font-family: var(--latin-font);
+	font-weight: 700;
+
+	ul {
+		display: flex;
+		gap: 1.5em;
+
+		a {
+			display: flex;
+		}
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* ヒーロー */
+
+/* ------------------------------------------------------ */
+
+/* レイアウト */
+.hero {
+	display: block grid;
+	grid-template:
+		"heading"
+		"cta"
+		"photo";
+	gap: 2em;
+	justify-items: center;
+	padding-block: 4em 0;
+	padding-inline: var(--page-padding);
+	text-align: center;
+
+	> :is(h1, hgroup) {
+		grid-area: heading;
+	}
+
+	> .cta {
+		grid-area: cta;
+	}
+
+	> img {
+		grid-area: photo;
+	}
+
+	@media (width >= 768px) {
+		grid-template:
+			"heading cta"
+			"photo photo";
+		grid-template-columns: 1fr 17em;
+		justify-items: stretch;
+		align-items: end;
+		text-align: left;
+	}
+}
+
+/* スタイル */
+.hero {
+	hgroup {
+		display: grid;
+
+		p {
+			grid-row: 1;
+			font-weight: 700;
+		}
+	}
+
+	h1 {
+		font-family: var(--latin-font);
+		font-size: max(48px, 8.3vw); /* 画面幅1440pxで120px */
+		font-weight: 900;
+		line-height: 1;
+	}
+
+	img {
+		aspect-ratio: 3/4;
+		object-fit: cover;
+		border-radius: 8px;
+
+		@media (width >= 768px) {
+			aspect-ratio: 2/1;
+		}
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* CTA */
+
+/* ------------------------------------------------------ */
+.cta {
+	p {
+		margin-bottom: 1em;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* ボタン */
+
+/* ------------------------------------------------------ */
+
+button,
+input[type="submit"] {
+	padding: 14px 24px;
+	font-weight: bold;
+	line-height: 1;
+	border: solid 1px transparent;
+	border-radius: 8px;
+}
+
+.primary-button {
+	width: 100%;
+	color: var(--white);
+	background-color: var(--primary);
+	transition: background-color 0.5s;
+
+	@media (prefers-reduced-motion) {
+		transition: none;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			/* プライマリーカラーの色相を変える */
+			background-color: lch(from var(--primary) l c calc(h + 20));
+		}
+	}
+}
+
+.secondary-button {
+	width: 100%;
+	font-weight: normal;
+	color: var(--darkgray);
+	background-color: transparent;
+	border-color: var(--darkgray);
+}
+
+/* ------------------------------------------------------ */
+
+/* ダイアログ */
+
+/* ------------------------------------------------------ */
+
+dialog {
+	width: clamp(300px, 80vw, 400px); /* 画面幅500pxで400px */
+	margin: auto;
+	padding: 20px 32px;
+	border-color: gray;
+	border-radius: 16px;
+
+	form {
+		display: grid;
+		gap: 8px;
+
+		p {
+			margin-block: 0 8px;
+		}
+
+		button[value="accept"] {
+			width: 100%;
+		}
+	}
+
+	#close {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		padding: 8px;
+		filter: grayscale(1);
+	}
+
+	&::backdrop {
+		background-color: rgb(0 0 0 / 70%);
+	}
+}
+
+/* 開閉アニメーション */
+dialog {
+	position: fixed;
+	inset-block-start: 0px;
+	inset-block-end: 0px;
+	opacity: 0;
+	transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete, opacity 0.5s;
+
+	@media (prefers-reduced-motion) {
+		transition: none;
+	}
+}
+
+dialog[open] {
+	opacity: 1;
+}
+
+@starting-style {
+	dialog[open] {
+		opacity: 0;
+	}
+}
+
+/* バックドロップの開閉アニメーション */
+dialog::backdrop {
+	background-color: rgb(0 0 0 / 60%);
+	opacity: 0;
+	transition: opacity 0.5s;
+
+	@media (prefers-reduced-motion) {
+		transition: none;
+	}
+}
+
+dialog[open]::backdrop {
+	opacity: 1;
+}
+
+@starting-style {
+	dialog[open]::backdrop {
+		opacity: 0;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* メッセージ */
+
+/* ------------------------------------------------------ */
+
+/* レイアウト */
+.message {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 1em;
+	justify-content: center;
+	align-items: center;
+	padding-block: 5em;
+}
+
+/* スタイル */
+.message {
+	font-size: clamp(16px, 2.7vw, 40px); /* 画面幅1440pxで40px */
+	line-height: 1.5;
+
+	svg {
+		width: 4em;
+		height: auto;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* サービス */
+
+/* ------------------------------------------------------ */
+
+/* レイアウト */
+.services {
+	display: grid;
+	gap: 5em;
+	padding-block: 7em;
+	padding-inline: var(--page-padding);
+
+	> hgroup {
+		display: grid;
+		align-content: end;
+
+		p {
+			grid-row: 1;
+		}
+	}
+
+	@media (width >= 768px) {
+		grid-template-columns: 1fr 4fr;
+
+		> hgroup {
+			/* スティッキー */
+			align-self: start;
+			position: sticky;
+			top: 20px;
+
+			/* 縦書き */
+			writing-mode: vertical-rl;
+		}
+	}
+}
+
+/* スタイル */
+.services {
+	background-color: var(--gray);
+
+	> hgroup {
+		h2 {
+			font-size: clamp(54px, 6.6vw, 96px); /* 画面幅1440pxで96px */
+			line-height: 1;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* カード */
+
+/* ------------------------------------------------------ */
+
+/* カード一覧 */
+.cards {
+	display: grid;
+	gap: 4em;
+
+	/* クエリコンテナを作成 */
+	container-type: inline-size;
+}
+
+/* カードのレイアウト */
+.card {
+	display: grid;
+	grid-template-areas:
+		"heading"
+		"photo"
+		"text";
+	gap: 1em 3em;
+
+	> hgroup {
+		grid-area: heading;
+	}
+
+	> img {
+		grid-area: photo;
+		height: 180px;
+	}
+
+	> p {
+		grid-area: text;
+	}
+
+	/* クエリコンテナに合わせてレイアウトを変更 */
+	@container (width >= 580px) {
+		grid-template-areas:
+			"photo . "
+			"photo heading"
+			"photo text"
+			"photo . ";
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 20px auto auto 20px;
+
+		> img {
+			height: 0;
+			min-height: 100%;
+		}
+	}
+}
+
+/* カードのスタイル */
+.card {
+	font-size: max(15px, 2cqw); /* クエリコンテナ幅1000pxで20px */
+
+	hgroup {
+		display: grid;
+		gap: 0.25em;
+
+		h3 {
+			font-size: 2em;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		p {
+			grid-row: 1;
+			font-weight: 700;
+		}
+	}
+
+	a {
+		display: block;
+		width: max-content;
+		margin-left: auto;
+		font-family: var(--latin-font);
+		font-weight: 600;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* リンク （2色の下線を表示） */
+
+/* ------------------------------------------------------ */
+
+/* 1色目の表示範囲を管理（初期値20%） */
+@property --bar {
+	syntax: "<percentage>";
+	inherits: true;
+	initial-value: 20%;
+}
+
+/* 2色の設定 */
+:root {
+	/* 1色目 */
+	--bar-color-primary: var(--primary);
+
+	/* 2色目 */
+	--bar-color-secondary: light-dark(lightgray, gray);
+
+	/* ナビゲーションメニューの下線の設定 */
+	.menu {
+		/* 2色目（透明） */
+		--bar-color-secondary: transparent;
+
+		/* 1色目のデフォルトの表示範囲 0% */
+		--bar: 0%;
+	}
+}
+
+/* 下線の表示 */
+:is(.menu, #services) a {
+	background-image: linear-gradient(
+		to right,
+		var(--bar-color-primary) var(--bar),
+		var(--bar-color-secondary) var(--bar)
+	);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: auto 2px;
+	transition: --bar 0.2s ease-in;
+
+	@media (prefers-reduced-motion) {
+		transition: none;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			--bar: 100%;
+		}
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* ページのフッター */
+
+/* ------------------------------------------------------ */
+
+/* カラースキーム */
+body > footer {
+	color-scheme: dark;
+	color: var(--text);
+	background-color: var(--background);
+}
+
+/* レイアウト */
+body > footer {
+	display: grid;
+	gap: 1.5em;
+	justify-items: center;
+	padding-block: 4em;
+	padding-inline: var(--page-padding);
+
+	.logo svg {
+		width: 2.5em;
+		height: auto;
+	}
+
+	@media (width >= 768px) {
+		grid-template-columns: 1fr auto;
+		grid-auto-flow: column;
+		justify-items: start;
+		align-items: baseline;
+	}
+}
+
+/* スタイル */
+body > footer {
+	.logo {
+		font-family: var(--latin-font);
+		font-size: 1.2em;
+		font-weight: 700;
+	}
+
+	.menu {
+		font-weight: 500;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* 記事 */
+
+/* ------------------------------------------------------ */
+
+/* レイアウト */
+.post {
+	display: grid;
+	grid-template:
+		"hero"
+		"body"
+		"cta";
+	gap: 4em 6em;
+	justify-items: center;
+	align-items: start;
+	padding-block: 3em 6em;
+	padding-inline: var(--page-padding);
+
+	> .hero {
+		grid-area: hero;
+		padding: 0;
+	}
+
+	> .body {
+		grid-area: body;
+	}
+
+	> .cta {
+		grid-area: cta;
+	}
+
+	@media (width >= 768px) {
+		grid-template:
+			"hero hero"
+			"body cta";
+		grid-template-columns: 1fr 17em;
+		justify-items: stretch;
+	}
+}
+
+/* 記事本文 */
+.body {
+	> :first-child {
+		margin-top: 0;
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	p {
+		margin-block: 1em;
+	}
+
+	h2,
+	h3 {
+		margin-block: 2em 1em;
+	}
+
+	h2 {
+		font-size: 1.8em;
+	}
+
+	strong {
+		color: var(--attention);
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* コンタクトフォーム */
+
+/* ------------------------------------------------------ */
+
+.contact {
+	display: grid;
+	gap: 1.5em;
+	max-width: max(500px, 60vw);
+	margin-inline: auto;
+	padding-block: 5em 10em;
+	padding-inline: var(--page-padding);
+
+	label {
+		display: grid;
+	}
+
+	input:not([type="submit"]),
+	textarea {
+		padding: 8px;
+		border: solid 2px var(--darkgray);
+		border-radius: 4px;
+	}
+
+	textarea {
+		min-height: 6lh;
+		resize: vertical;
+		field-sizing: content;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* スクロール駆動アニメーション */
+
+/* ------------------------------------------------------ */
+
+@media (prefers-reduced-motion: no-preference) {
+	.message,
+	#services > hgroup,
+	#services article {
+		animation: scroll-anim ease-out both;
+		animation-timeline: view();
+	}
+
+	@keyframes scroll-anim {
+		10% {
+			opacity: 0;
+			translate: 0 100px;
+		}
+
+		40% {
+			opacity: 1;
+			translate: 0;
+		}
+	}
+}

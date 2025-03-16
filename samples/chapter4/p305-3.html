@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			section {
+				position: relative;
+				display: grid;
+			}
+
+			div:nth-child(3) {
+				position: absolute;
+				justify-self: end;
+				align-self: end;
+			}
+
+			/* base */
+			@layer base, color;
+
+			@layer color {
+				div:nth-child(1) {
+					background-color: peachpuff;
+				}
+
+				div:nth-child(2) {
+					background-color: lch(from peachpuff l c calc(h - 100));
+				}
+
+				div:nth-child(3) {
+					font-size: 2em;
+					color: black;
+					background-color: rgb(from yellow r g b / 0.9);
+				}
+
+				div:nth-child(4) {
+					background-color: lch(from peachpuff l c calc(h - 200));
+				}
+
+				div:nth-child(5) {
+					background-color: lch(from peachpuff l c calc(h - 300));
+				}
+			}
+
+			@layer base {
+				* {
+					box-sizing: border-box;
+				}
+
+				body {
+					margin-block-end: 1000px;
+				}
+
+				section {
+					padding: 20px;
+					border: solid 4px royalblue;
+				}
+
+				section {
+					box-sizing: border-box;
+					margin: 20px;
+					padding: 20px;
+					color: #777;
+					font-family: outfit, sans-serif;
+					font-weight: bold;
+					text-align: center;
+				}
+
+				div {
+					padding-block: 8px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section class="container">
+			<div class="item">Home</div>
+			<div class="item">Services</div>
+			<div class="item">Design</div>
+			<div class="item">Setup</div>
+			<div class="item">Solutions</div>
+		</section>
+	</body>
+</html>

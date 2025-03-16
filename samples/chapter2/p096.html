@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+					justify-items: start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<textarea rows="4" cols="30"></textarea>
+
+		<textarea rows="4" cols="30">コメントを記述</textarea>
+
+		<progress max="100" value="30"></progress>
+
+		<form oninput="total.value=parseInt(A.value)+parseInt(B.value)">
+			<input type="number" name="A" value="0" /> + <input type="number" name="B" value="0" /> =
+			<output name="total" for="A B"></output>
+		</form>
+
+		<label> 使用量 <meter value="30" min="0" max="100" low="60" high="80" optimum="50"></meter> </label>
+		<label> 使用量 <meter value="70" min="0" max="100" low="60" high="80" optimum="50"></meter> </label>
+		<label> 使用量 <meter value="90" min="0" max="100" low="60" high="80" optimum="50"></meter> </label>
+
+		<fieldset>
+			<legend>好きなフルーツ</legend>
+			<label><input type="checkbox" name="fruits" value="orange" />オレンジ</label>
+			<label><input type="checkbox" name="fruits" value="banana" />バナナ</label>
+			<label><input type="checkbox" name="fruits" value="apple" />林檎</label>
+		</fieldset>
+	</body>
+</html>

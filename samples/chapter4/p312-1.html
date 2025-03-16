@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			article {
+				border: solid 8px royalblue;
+				margin-bottom: 2px;
+			}
+
+			img {
+				float: left;
+			}
+
+			/* カウンター */
+			body {
+				counter-reset: number;
+			}
+
+			article h2::before {
+				content: counter(number) ". ";
+				counter-increment: number;
+				color: red;
+			}
+
+			/* 固定位置指定（fixed） */
+			span {
+				position: fixed;
+				top: -12px;
+				right: -16px;
+				z-index: 10;
+			}
+
+			/* base */
+			@layer base {
+				* {
+					box-sizing: border-box;
+					margin: 0;
+				}
+
+				body {
+					margin: 40px;
+				}
+
+				article {
+					margin-top: 20px;
+					padding-inline: 8px;
+					color: #777;
+					font-family: outfit, sans-serif;
+					font-weight: bold;
+					border: solid 8px royalblue;
+					background: lightcyan;
+
+					span {
+						color: gold;
+						font-size: 100px;
+						line-height: 1;
+						vertical-align: bottom;
+					}
+				}
+
+				img {
+					width: 48px;
+					height: 48px;
+					margin-right: 10px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<article>
+			<h2>Home <span>★</span></h2>
+		</article>
+
+		<button>コンテンツの追加</button>
+
+		<script>
+			const button = document.querySelector("button")
+			const article = document.querySelector("article")
+
+			button.addEventListener("click", function () {
+				const img = document.createElement("img")
+				img.src = "assets/question.svg"
+				article.insertBefore(img, article.firstChild)
+			})
+		</script>
+	</body>
+</html>

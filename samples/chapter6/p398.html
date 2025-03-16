@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+		<style>
+			.s01 {
+				img {
+					float: left;
+					shape-outside: circle(50px at 50% 50%) margin-box;
+					clip-path: circle(50px at 50% 50%);
+				}
+			}
+
+			.s02 {
+				img {
+					float: left;
+					shape-outside: url(assets/tomato.png);
+					shape-margin: 10px;
+					margin: 10px;
+				}
+			}
+
+			/* base */
+			@layer base {
+				.s01 img {
+					width: 100px;
+					height: 100px;
+					object-fit: cover;
+				}
+
+				.s02 img {
+					width: 210px;
+					object-fit: cover;
+				}
+
+				p {
+					margin: 0;
+				}
+
+				div {
+					display: flow-root;
+					max-width: 376px;
+					margin-bottom: 80px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<img src="assets/office.jpg" alt="" />
+			<p>
+				ホームオフィスはあなたの職業生活の中心となります。適切にデザインされた作業空間は生産性、快適性、そして全体的な仕事の満足度に重要な役割を果たします。
+			</p>
+		</div>
+
+		<div class="s02">
+			<img src="assets/tomato.png" />
+			<p>
+				ホームオフィスはあなたの職業生活の中心となります。適切にデザインされた作業空間は生産性、快適性、そして全体的な仕事の満足度に重要な役割を果たします。
+			</p>
+		</div>
+
+		<p>※スタイルを表示に反映するためにはサーバー環境での実行が必要です</p>
+	</body>
+</html>

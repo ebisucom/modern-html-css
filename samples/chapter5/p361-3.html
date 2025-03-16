@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+
+		<style>
+			h1.s01 {
+				text-shadow: 2px 2px 3px lightgray;
+			}
+
+			h1.s02 {
+				color: white;
+				text-shadow: 1px 1px 2px black, 0 0 16px limegreen;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="s01">快適なホームオフィス</h1>
+
+		<h1 class="s02">快適なホームオフィス</h1>
+	</body>
+</html>

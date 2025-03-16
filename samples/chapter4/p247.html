@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			p.s01::first-letter {
+				-webkit-initial-letter: 2;
+				initial-letter: 2 drop;
+			}
+
+			p.s02::first-letter {
+				-webkit-initial-letter: 2 1;
+				initial-letter: 2 raise;
+			}
+
+			/* base */
+			@layer base {
+				p {
+					max-width: 312px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="s01">家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。</p>
+		<p class="s02">家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。</p>
+	</body>
+</html>

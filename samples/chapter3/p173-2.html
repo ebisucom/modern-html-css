@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.post a {
+				color: royalblue;
+			}
+
+			.post span a {
+				color: red;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 16px;
+				}
+
+				article {
+					h1 {
+						margin: 0;
+						font-size: 24px;
+					}
+
+					p {
+						margin: 8px 0;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<article class="post">
+			<h1>Home Office</h1>
+			<p>環境を整えることで<a href="…">快適な空間</a>を 作り出します</p>
+			<p>
+				<template shadowrootmode="open">
+					<style>
+						::slotted(span) {
+							background-color: yellow;
+						}
+
+						::slotted(span[slot="extra"]) {
+							font-size: smaller;
+						}
+					</style>
+					※ <slot></slot><br />
+					<slot name="extra"></slot>
+				</template>
+				<span><a href="#">注意事項</a>をご確認の上、ご利用ください</span>
+				<span slot="extra"><a href="#">プライバシーポリシー</a></span>
+			</p>
+		</article>
+	</body>
+</html>

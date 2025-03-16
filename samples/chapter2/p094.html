@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				body,
+				form {
+					display: grid;
+					gap: 40px;
+					justify-items: start;
+				}
+				[type="image"] {
+					width: 100px;
+					height: auto;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<input type="submit" />
+			<input type="reset" />
+			<input type="button" value="ボタン" />
+			<input type="image" src="assets/button-image.png" alt="Post" width="158" height="56" />
+		</form>
+		<button type="button">コピーする</button>
+	</body>
+</html>

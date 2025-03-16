@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.text {
+				font-variant-emoji: text;
+			}
+
+			.emoji {
+				font-variant-emoji: emoji;
+			}
+
+			/* base */
+			@layer base {
+				p {
+					font-family: "Segoe UI Symbol";
+					font-size: 50px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="text">☎</p>
+		<p class="emoji">☎</p>
+		<hr />
+		<p class="text">&#x260e;</p>
+		<p class="emoji">&#x260e;</p>
+	</body>
+</html>

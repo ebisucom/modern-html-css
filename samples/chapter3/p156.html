@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				section .heading,
+				section p {
+					background-color: peachpuff;
+				}
+			}
+
+			.s02 {
+				section :is(.heading, p) {
+					background-color: peachpuff;
+				}
+			}
+
+			.s03 {
+				section .heading,
+				section p:unknown {
+					background-color: peachpuff;
+				}
+			}
+
+			.s04 {
+				section :is(.heading, p:unknown) {
+					background-color: peachpuff;
+				}
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+				}
+				.heading {
+					margin-block: 0.5em 0.25em;
+				}
+				p {
+					margin-block: 0;
+				}
+				h1 {
+					font-size: 1.75em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<section>
+				<h2 class="heading">Home Office</h2>
+				<p>快適な空間を作り出す</p>
+			</section>
+		</div>
+
+		<div class="s02">
+			<section>
+				<h2 class="heading">Home Office</h2>
+				<p>快適な空間を作り出す</p>
+			</section>
+		</div>
+
+		<div class="s03">
+			<section>
+				<h2 class="heading">Home Office</h2>
+				<p>快適な空間を作り出す</p>
+			</section>
+		</div>
+
+		<div class="s04">
+			<section>
+				<h2 class="heading">Home Office</h2>
+				<p>快適な空間を作り出す</p>
+			</section>
+		</div>
+	</body>
+</html>

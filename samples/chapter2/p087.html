@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 summary {
+				display: block;
+
+				&::-webkit-details-marker {
+					display: none;
+				}
+			}
+
+			/* base */
+			@layer base {
+				hr {
+					margin-block: 40px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<details>
+			<summary>サイズ</summary>
+			200mm x 300mm x 100mm
+		</details>
+
+		<hr />
+
+		<details class="s01">
+			<summary>サイズ</summary>
+			200mm x 300mm x 100mm
+		</details>
+
+		<hr />
+
+		<details name="product" open>
+			<summary>サイズ</summary>
+			200mm x 300mm x 100mm
+		</details>
+		<details name="product">
+			<summary>色</summary>
+			ブルーグレー
+		</details>
+	</body>
+</html>

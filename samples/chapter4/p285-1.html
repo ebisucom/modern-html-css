@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/p285-base.css" />
+		<style>
+			@layer base {
+				#notice-01 {
+					background-color: palegreen;
+					inset: 20px auto auto 20px;
+				}
+
+				#notice-02 {
+					background-color: lightcyan;
+					inset: 100px auto auto 50px;
+				}
+			}
+		</style>
+	</head>
+	<body class="toplayer">
+		<div popover="manual" id="notice-01">
+			<p>Welcome!</p>
+			<button popovertarget="notice-01" popovertargetaction="hide" aria-label="閉じる">
+				<span aria-hidden="true">❌️</span>
+			</button>
+		</div>
+
+		<div popover="manual" id="notice-02">
+			<p>お知らせが届いています</p>
+			<button popovertarget="notice-02" popovertargetaction="hide" aria-label="閉じる">
+				<span aria-hidden="true">❌️</span>
+			</button>
+		</div>
+
+		<script>
+			document.getElementById("notice-01").showPopover()
+			document.getElementById("notice-02").showPopover()
+		</script>
+	</body>
+</html>

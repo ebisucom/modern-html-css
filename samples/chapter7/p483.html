@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			.container {
+				perspective: 500px;
+			}
+			.container div {
+				transform: rotateY(45deg);
+			}
+
+			.container.origin01 {
+				perspective-origin: 0% 0%;
+			}
+			.container.origin02 {
+				perspective-origin: 50% 50%;
+			}
+			.container.origin03 {
+				perspective-origin: 100% 100%;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+					margin: 20px;
+				}
+				.container {
+					width: 300px;
+					margin: 0 auto 80px;
+					border: solid 10px #abcf3e;
+				}
+				.container div {
+					width: 300px;
+					height: 180px;
+					background-image: url(assets/home.jpg);
+					margin: 0;
+					background-size: cover;
+					background-position: 0 -20px;
+					color: white;
+					font-size: 36px;
+					font-weight: bold;
+					text-shadow: 0 0 10px black;
+					text-align: center;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.s00 div {
+					transform: none !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container s00">
+			<div>HOME OFFICE</div>
+		</div>
+
+		<div class="container s01">
+			<div>HOME OFFICE</div>
+		</div>
+
+		<div class="container origin01">
+			<div>HOME OFFICE</div>
+		</div>
+
+		<div class="container origin02">
+			<div>HOME OFFICE</div>
+		</div>
+
+		<div class="container origin03">
+			<div>HOME OFFICE</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				form {
+					display: grid;
+					gap: 40px;
+					justify-items: start;
+				}
+				label {
+					display: grid;
+					justify-items: start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<form enctype="multipart/form-data">
+			<input type="hidden" name="session" value="page-01" />
+			<input type="hidden" name="_charset_" />
+
+			<label>
+				JPEG, PDF
+				<input type="file" name="photo" accept="image/jpeg,.pdf" multiple />
+			</label>
+
+			<label>
+				Capture
+				<input type="file" name="photo" capture="environment" />
+			</label>
+		</form>
+	</body>
+</html>

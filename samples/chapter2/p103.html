@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				form {
+					display: grid;
+					gap: 40px;
+					justify-items: start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<label>
+				メールアドレス（複数可）：
+				<input type="email" size="40" multiple />
+			</label>
+
+			<label>
+				小文字アルファベット：
+				<input type="text" name="text" pattern="[a-z]+" title="小文字アルファベットで入力してください" />
+			</label>
+
+			<label>
+				<input type="email" placeholder="メールアドレス" />
+			</label>
+
+			<label>
+				メールアドレス ※必須
+				<input type="email" required />
+			</label>
+
+			<input type="submit" />
+		</form>
+	</body>
+</html>

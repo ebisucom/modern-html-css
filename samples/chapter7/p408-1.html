@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			body {
+				accent-color: auto;
+				accent-color: orange;
+				accent-color: red;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 10px;
+					justify-content: left;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<label><input type="checkbox" checked />オレンジ</label>
+
+		<label><input type="radio" checked />オレンジ</label>
+
+		<input type="range" />
+
+		<progress max="100" value="30"></progress>
+	</body>
+</html>

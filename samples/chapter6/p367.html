@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			img {
+				width: 320px;
+				height: 100px;
+				object-fit: none;
+				border: solid 6px #abcf3e;
+			}
+
+			.s01 {
+				object-position: 0% 0%;
+			}
+			.s02 {
+				object-position: 50% 50%;
+			}
+			.s03 {
+				object-position: 100% 100%;
+			}
+			.s04 {
+				object-position: top 20px left 20px;
+			}
+
+			/* base */
+			@layer base {
+				img {
+					border: solid 6px #abcf3e;
+				}
+				.container {
+					display: flex;
+					gap: 30px;
+				}
+				.container > div {
+					width: 360px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="large">
+				<img src="assets/home.jpg" alt="" class="s01" />
+				<img src="assets/home.jpg" alt="" class="s02" />
+				<img src="assets/home.jpg" alt="" class="s03" />
+				<img src="assets/home.jpg" alt="" class="s04" />
+			</div>
+
+			<div class="small">
+				<img src="assets/music.jpg" alt="" class="s01" />
+				<img src="assets/music.jpg" alt="" class="s02" />
+				<img src="assets/music.jpg" alt="" class="s03" />
+				<img src="assets/music.jpg" alt="" class="s04" />
+			</div>
+		</div>
+	</body>
+</html>

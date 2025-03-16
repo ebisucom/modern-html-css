@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Custom Highlight Example</title>
+		<style>
+			::highlight(my-highlight) {
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Home Office</h1>
+
+		<script>
+			const text = document.querySelector("h1")
+
+			// ハイライトする範囲を指定
+			const range1 = new Range()
+			range1.setStart(text.firstChild, 2)
+			range1.setEnd(text.firstChild, 6)
+
+			const range2 = new Range()
+			range2.setStart(text.firstChild, 8)
+			range2.setEnd(text.firstChild, 10)
+
+			// 指定した範囲のHighlightオブジェクトを作成
+			const highlight = new Highlight(range1, range2)
+
+			// 作成したオブジェクトをHighlightRegistryに登録
+			CSS.highlights.set("my-highlight", highlight)
+		</script>
+	</body>
+</html>

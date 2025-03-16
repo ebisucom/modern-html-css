@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			div {
+				display: block flow;
+			}
+
+			div.s01 {
+				h1 {
+					width: min-content;
+					height: min-content;
+				}
+			}
+
+			div.s02 {
+				h1 {
+					width: max-content;
+					height: max-content;
+				}
+			}
+
+			div.s03 {
+				h1 {
+					width: fit-content;
+					height: fit-content;
+				}
+			}
+
+			div.s04 {
+				h1 {
+					width: -moz-available;
+					width: -webkit-fill-available;
+					width: stretch;
+					height: -moz-available;
+					height: -webkit-fill-available;
+					height: stretch;
+				}
+			}
+
+			/* base */
+			@layer base {
+				* {
+					margin: 0;
+				}
+
+				body {
+					display: grid;
+					grid-template-columns: minmax(0, auto);
+					gap: 40px;
+					margin: 20px;
+				}
+				div {
+					width: auto;
+					height: 120px;
+					border: solid 4px royalblue;
+				}
+				h1 {
+					margin: 0;
+					font-size: 28px;
+					line-height: 1;
+					background: #8df3ff;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<h1>Home Office</h1>
+		</div>
+
+		<div class="s02">
+			<h1>Home Office</h1>
+		</div>
+
+		<div class="s03">
+			<h1>Home Office</h1>
+		</div>
+
+		<div class="s04">
+			<h1>Home Office</h1>
+		</div>
+	</body>
+</html>

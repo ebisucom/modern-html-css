@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			div {
+				text-align: justify;
+				text-align-last: justify;
+			}
+
+			div.s01 {
+				text-justify: auto;
+			}
+			div.s02 {
+				text-justify: none;
+			}
+			div.s03 {
+				text-justify: inter-word;
+			}
+			div.s04 {
+				text-justify: inter-character;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+				div {
+					margin-bottom: 30px;
+				}
+				h1 {
+					margin: 10px 0;
+					padding: 5px 10px;
+					font-size: 20px;
+					background: #f3c90b;
+				}
+				p {
+					margin: 0;
+					padding: 10px;
+					font-size: 16px;
+					border: solid 2px #ff8e52;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<h1>快適な Home Office</h1>
+		</div>
+
+		<div class="s02">
+			<h1>快適な Home Office</h1>
+		</div>
+
+		<div class="s03">
+			<h1>快適な Home Office</h1>
+		</div>
+
+		<div class="s04">
+			<h1>快適な Home Office</h1>
+		</div>
+	</body>
+</html>

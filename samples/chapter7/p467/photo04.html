@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>photo04</title>
+		<link rel="stylesheet" href="../assets/viewtransition.css" />
+		<style>
+			@view-transition {
+				navigation: auto;
+			}
+
+			/* 詳細の画像に遷移名を指定 */
+			article img {
+				view-transition-name: photo;
+			}
+		</style>
+		<script src="script.js" defer blocking="render"></script>
+	</head>
+	<body>
+		<article>
+			<img src="../assets/photo04.jpg" alt="" />
+			<h1>photo04</h1>
+			<p>オフィスの環境作りから、仕事も遊びもトータルでサポートします</p>
+			<a href="cards.html" class="back">戻る</a>
+		</article>
+	</body>
+</html>

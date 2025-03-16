@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			video {
+				width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>日本語・英語字幕</h2>
+		<p>※字幕を表示するにはサーバー環境での実行が必要です</p>
+		<video src="assets/home.mp4" controls width="640" height="360">
+			<track kind="captions" src="assets/track-ja.vtt" srclang="ja" label="日本語" default />
+			<track kind="captions" src="assets/track-en.vtt" srclang="en" label="英語" />
+		</video>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+				}
+				textarea {
+					display: block;
+					width: 100%;
+					max-width: 400px;
+					height: 100px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div tabindex="0">フォーカス可能</div>
+
+		<p><abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr>の規格</p>
+
+		<span translate="no">ブランド名</span>
+
+		<label>
+			お問い合わせ内容（writingsuggestions="true"）
+			<textarea writingsuggestions="true">こんにちは。効率よくデザインする方法を知りたいのですが、</textarea>
+		</label>
+
+		<label>
+			お問い合わせ内容（writingsuggestions="false"）
+			<textarea writingsuggestions="false">こんにちは。効率よくデザインする方法を知りたいのですが、</textarea>
+		</label>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			div.s01 {
+				clip-path: inset(30px round 10px);
+			}
+
+			div.s01a {
+				clip-path: rect(30px 270px 150px 30px round 10px);
+			}
+
+			div.s01b {
+				clip-path: xywh(30px 30px 240px 120px round 10px);
+			}
+
+			div.s02 {
+				clip-path: circle(80px at 50% 50%);
+			}
+
+			div.s03 {
+				clip-path: polygon(50% 0%, 0% 80%, 100% 60%);
+			}
+
+			div.s04 {
+				clip-path: ellipse(120px 80px at 50% 50%);
+			}
+
+			div.s05a {
+				clip-path: shape(evenodd from 0px 0px, hline by 200px, vline by 150px, close, move to 150px 20px, hline by 100px, vline by 40px, close);
+			}
+			div.s05b {
+				clip-path: path(evenodd, "M 0 0 h200 v150 z M 150 20 h100 v40 z");
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+					margin: 20px;
+				}
+				div {
+					display: grid;
+					place-items: center;
+					width: 300px;
+					height: 180px;
+					background-image: url(assets/home.jpg);
+					margin: 30px auto;
+					background-size: cover;
+					background-position: 0 -20px;
+					color: white;
+					font-size: 36px;
+					font-weight: bold;
+					text-shadow: 0 0 10px black;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">HOME OFFICE</div>
+		<div class="s01a">HOME OFFICE</div>
+		<div class="s01b">HOME OFFICE</div>
+
+		<div class="s02">HOME OFFICE</div>
+
+		<div class="s03">HOME OFFICE</div>
+
+		<div class="s04">HOME OFFICE</div>
+
+		<div class="s05a">HOME OFFICE</div>
+		<div class="s05b">HOME OFFICE</div>
+	</body>
+</html>

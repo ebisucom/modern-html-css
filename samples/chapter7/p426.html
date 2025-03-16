@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			h1 {
+				display: none;
+				opacity: 0;
+				transition: display 1s allow-discrete, opacity 1s;
+			}
+
+			h1.show {
+				display: block;
+				opacity: 1;
+			}
+
+			@starting-style {
+				h1.show {
+					opacity: 0;
+				}
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					justify-items: center;
+				}
+				h1 {
+					width: max-content;
+					margin: 5px 0;
+					background: gold;
+					font-size: 32px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<button>表示切り替え</button>
+
+		<h1>Home</h1>
+
+		<script>
+			const button = document.querySelector("button")
+
+			button.addEventListener("click", function () {
+				const h1 = document.querySelector("h1")
+				h1.classList.toggle("show")
+			})
+		</script>
+	</body>
+</html>

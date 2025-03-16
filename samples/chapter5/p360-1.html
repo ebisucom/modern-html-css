@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+		<style>
+			.s01 {
+				text-decoration: underline;
+				text-decoration-color: red;
+				text-decoration-thickness: 1px;
+				text-underline-position: auto;
+			}
+
+			.s02 {
+				text-decoration: underline;
+				text-decoration-color: red;
+				text-decoration-thickness: 1px;
+				text-underline-position: from-font;
+			}
+
+			.s03 {
+				text-decoration: underline;
+				text-decoration-color: red;
+				text-decoration-thickness: 1px;
+				text-underline-position: under;
+			}
+
+			.s04 {
+				writing-mode: vertical-rl;
+				text-decoration: underline;
+				text-decoration-color: red;
+				text-decoration-thickness: 1px;
+				text-underline-position: right;
+			}
+
+			.s05 {
+				writing-mode: vertical-rl;
+				text-decoration: underline;
+				text-decoration-color: red;
+				text-decoration-thickness: 1px;
+				text-underline-position: left;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					font-family: "Prompt", sans-serif;
+				}
+				h1 {
+					margin: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="s01">Happy Holidays</h1>
+		<h1 class="s02">Happy Holidays</h1>
+		<h1 class="s03">Happy Holidays</h1>
+		<h1 class="s04">Happy Holidays</h1>
+		<h1 class="s05">Happy Holidays</h1>
+	</body>
+</html>

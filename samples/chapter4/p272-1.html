@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			section.s01 {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+				grid-auto-rows: auto;
+			}
+
+			section.s02 {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+				grid-auto-rows: 80px;
+			}
+
+			section.s03 {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+				grid-auto-rows: 80px 120px;
+			}
+
+			/* base */
+			@layer base, color;
+
+			@layer color {
+				section {
+					border: solid 4px royalblue;
+				}
+
+				div:nth-child(1) {
+					background-color: yellow;
+				}
+
+				div:nth-child(2) {
+					background-color: orange;
+				}
+
+				div:nth-child(3) {
+					background-color: pink;
+				}
+
+				div:nth-child(4) {
+					background-color: palegreen;
+				}
+
+				div:nth-child(5) {
+					background-color: lightblue;
+				}
+
+				div:nth-child(6) {
+					background-color: peachpuff;
+				}
+			}
+
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+				}
+
+				section {
+					font-family: outfit, sans-serif;
+					font-weight: bold;
+				}
+
+				div {
+					display: grid;
+					place-items: center;
+					text-align: center;
+					padding: 5px;
+				}
+
+				a {
+					color: inherit;
+					text-decoration: inherit;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section class="s01">
+			<div>Home</div>
+			<div>Office Services</div>
+			<div>Professional Design</div>
+			<div>Setup</div>
+			<div>Virtual Office Solutions</div>
+		</section>
+
+		<section class="s02">
+			<div>Home</div>
+			<div>Office Services</div>
+			<div>Professional Design</div>
+			<div>Setup</div>
+			<div>Virtual Office Solutions</div>
+		</section>
+
+		<section class="s03">
+			<div>Home</div>
+			<div>Office Services</div>
+			<div>Professional Design</div>
+			<div>Setup</div>
+			<div>Virtual Office Solutions</div>
+		</section>
+	</body>
+</html>

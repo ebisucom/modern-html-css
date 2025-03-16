@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+@layer reset, base;
+
+/* ------------------------------------------------------ */
+
+/* リセット */
+
+/* ------------------------------------------------------ */
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	svg,
+	img {
+		vertical-align: bottom;
+	}
+
+	button,
+	input,
+	textarea {
+		margin: 0;
+		font-family: inherit;
+		font-size: 100%;
+		font-weight: inherit;
+		color: inherit;
+		background-color: transparent;
+		background-image: none;
+	}
+
+	button,
+	input[type="submit"] {
+		cursor: pointer;
+		border: none;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* 基本スタイル */
+
+/* ------------------------------------------------------ */
+
+@layer base {
+	/* カスタムプロパティ */
+	:root {
+		/* カラー */
+		--black: #222;
+		--white: light-dark(#fff, #eee);
+		--text: light-dark(var(--black), var(--white));
+		--background: light-dark(var(--white), var(--black));
+		--primary: #9000ff;
+		--attention: red;
+		--gray: light-dark(#efefef, #2d2d2d);
+		--darkgray: light-dark(#707070, #909090);
+
+		/* ページの左右の余白（画面幅1440pxで64px） */
+		--page-padding: max(16px, 4.4vw);
+
+		/* 欧文フォント */
+		--latin-font: "Outfit", "Outfit Fallback", sans-serif;
+	}
+
+	/* 代替フォント */
+	@font-face {
+		font-family: "Outfit Fallback";
+		src: local("Arial"), local("ArialMT");
+		size-adjust: 99.8204%;
+		ascent-override: 100.18%;
+		descent-override: 26.0468%;
+		line-gap-override: 0%;
+	}
+
+	/* ページ */
+	body {
+		font-family: sans-serif;
+		line-height: 1.8;
+		color: var(--text);
+		background-color: var(--background);
+	}
+
+	/* 画像 */
+	img {
+		object-fit: cover;
+		border-radius: 8px;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* ヒーロー */
+
+/* ------------------------------------------------------ */
+
+/* レイアウト */
+
+/* .hero {
+	display: block grid;
+	grid-template:
+		"heading"
+		"cta"
+		"photo";
+	gap: 2em;
+	justify-items: center;
+	text-align: center;
+
+	> :is(h1, hgroup) {
+		grid-area: heading;
+	}
+
+	> .cta {
+		grid-area: cta;
+	}
+
+	> img {
+		grid-area: photo;
+	}
+
+	@media (width >= 768px) {
+		grid-template:
+			"heading cta"
+			"photo photo";
+		grid-template-columns: 1fr 16em;
+		justify-items: start;
+		align-items: end;
+		text-align: left;
+	}
+} */
+
+/* スタイル */
+.hero {
+	padding-block: 4em 0;
+	padding-inline: var(--page-padding);
+
+	h1 {
+		font-family: var(--latin-font);
+		font-size: max(48px, 8.3vw); /* 画面幅1440pxで120px */
+		font-weight: 900;
+		line-height: 1;
+	}
+
+	img {
+		aspect-ratio: 2/1;
+		border-radius: 8px;
+		object-fit: cover;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* CTA */
+
+/* ------------------------------------------------------ */
+.cta {
+	p {
+		margin-bottom: 1em;
+	}
+}
+
+/* ------------------------------------------------------ */
+
+/* ボタン */
+
+/* ------------------------------------------------------ */
+
+button,
+input[type="submit"] {
+	padding: 14px 24px;
+	font-weight: bold;
+	line-height: 1;
+	border: solid 1px transparent;
+	border-radius: 8px;
+}
+
+.primary-button {
+	width: 100%;
+	color: var(--white);
+	background-color: var(--primary);
+	transition: background-color 0.5s;
+
+	@media (prefers-reduced-motion) {
+		transition: none;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			/* プライマリーカラーの色相を変える */
+			background-color: lch(from var(--primary) l c calc(h + 20));
+		}
+	}
+}

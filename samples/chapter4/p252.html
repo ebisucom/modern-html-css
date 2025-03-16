@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			ruby {
+				display: ruby;
+			}
+			rt {
+				display: ruby-text;
+			}
+
+			* {
+				font-family: sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>ruby-position</h2>
+
+		<ruby style="ruby-position: over">
+			橙色
+			<rt>だいだいいろ</rt>
+		</ruby>
+
+		<ruby style="ruby-position: under">
+			橙色
+			<rt>だいだいいろ</rt>
+		</ruby>
+
+		<ruby style="ruby-position: inter-character">
+			橙色
+			<rt>だいだいいろ</rt>
+		</ruby>
+
+		<h2>ruby-align</h2>
+
+		<ruby style="ruby-align: start">
+			橙色
+			<rt>だいだいいろ</rt>
+		</ruby>
+
+		<hr />
+
+		<ruby style="ruby-align: center">
+			橙色
+			<rt>だいだいいろ</rt>
+		</ruby>
+
+		<hr />
+
+		<ruby style="ruby-align: space-between">
+			橙色
+			<rt>だいだいいろ</rt>
+		</ruby>
+
+		<hr />
+
+		<ruby style="ruby-align: space-around">
+			橙色
+			<rt>だいだいいろ</rt>
+		</ruby>
+
+		<h2>ruby-overhang</h2>
+
+		<p>
+			これは
+			<ruby style="ruby-align: center; ruby-overhang: auto">
+				橙色
+				<rt>だいだいいろ</rt>
+			</ruby>
+			です
+		</p>
+
+		<p>
+			これは
+			<ruby style="ruby-align: center; ruby-overhang: none">
+				橙色
+				<rt>だいだいいろ</rt>
+			</ruby>
+			です
+		</p>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			.t01 {
+				text-align: justify;
+				hanging-punctuation: none;
+			}
+
+			.t02 {
+				text-align: justify;
+				hanging-punctuation: first allow-end last;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+				p {
+					margin-bottom: 30px;
+					border: solid 6px #abcf3e;
+					width: 115px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="t01">「あ」から「か」、「さ」（たな）。「はまやらわん」</p>
+		<p class="t02">「あ」から「か」、「さ」（たな）。「はまやらわん」</p>
+	</body>
+</html>

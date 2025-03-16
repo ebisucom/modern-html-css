@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+				}
+				label {
+					display: grid;
+					justify-items: start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<label>
+			テキスト
+			<input type="text" name="テキスト" size="20" />
+		</label>
+
+		<label>
+			検索
+			<input type="search" name="検索" />
+		</label>
+
+		<label>
+			URL
+			<input type="url" name="URL" />
+		</label>
+
+		<label>
+			メールアドレス
+			<input type="email" name="メールアドレス" />
+		</label>
+
+		<label>
+			電話番号
+			<input type="tel" name="電話番号" />
+		</label>
+
+		<label>
+			パスワード
+			<input type="password" name="パスワード" />
+		</label>
+	</body>
+</html>

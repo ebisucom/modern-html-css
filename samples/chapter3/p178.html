@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			span {
+				color: red;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 16px;
+				}
+
+				a {
+					color: royalblue;
+				}
+
+				article {
+					h1 {
+						margin: 0;
+					}
+
+					p {
+						margin: 8px 0;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<article>
+			<h1><span>Home</span> Office</h1>
+			<p>環境を整えることで<a href="">快適な空間</a>を作り出します</p>
+			<p class="attention">※<a href="">注意事項</a>をご確認の上、ご利用ください</p>
+		</article>
+	</body>
+</html>

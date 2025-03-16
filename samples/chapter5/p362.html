@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+		<style>
+			.t01 {
+				color: lemonchiffon;
+				-webkit-text-stroke: 4px limegreen;
+			}
+
+			.t02 {
+				color: lemonchiffon;
+				-webkit-text-stroke: 4px limegreen;
+				paint-order: stroke fill;
+			}
+
+			/* base */
+			@layer base {
+				h1 {
+					background-size: cover;
+					padding: 30px 0;
+					font-family: Prompt, sans-serif;
+					font-size: 12vw;
+					letter-spacing: 5px;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="t01">Home Office</h1>
+		<h1 class="t02">Home Office</h1>
+	</body>
+</html>

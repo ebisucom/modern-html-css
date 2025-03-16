@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			section {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+			}
+
+			.s02 {
+				.A {
+					grid-column: span 2;
+					grid-row: 1;
+				}
+				.B {
+					grid-column: 2 / 3;
+					grid-row: 1;
+				}
+			}
+
+			.s03 {
+				.A {
+					grid-column: span 2;
+					grid-row: 1;
+				}
+				.B {
+					grid-column: 2 / 3;
+				}
+			}
+
+			/* base */
+			@layer base, color;
+
+			@layer color {
+				section {
+					border: solid 4px royalblue;
+
+					div:nth-child(1) {
+						background-color: yellow;
+					}
+
+					div:nth-child(2) {
+						background-color: orange;
+					}
+
+					div:nth-child(3) {
+						background-color: pink;
+					}
+
+					div:nth-child(4) {
+						background-color: palegreen;
+					}
+
+					div:nth-child(5) {
+						background-color: lightblue;
+					}
+
+					div:nth-child(6) {
+						background-color: peachpuff;
+					}
+				}
+			}
+
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+				}
+
+				section {
+					font-family: outfit, sans-serif;
+					font-weight: bold;
+
+					div {
+						display: grid;
+						place-items: center;
+						text-align: center;
+						padding: 5px;
+					}
+				}
+
+				a {
+					color: inherit;
+					text-decoration: inherit;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<section>
+				<div class="A">A</div>
+				<div class="B">B</div>
+				<div class="C">C</div>
+				<div class="D">D</div>
+				<div class="E">E</div>
+			</section>
+		</div>
+
+		<div class="s02">
+			<section>
+				<div class="A">A</div>
+				<div class="B">B</div>
+				<div class="C">C</div>
+				<div class="D">D</div>
+				<div class="E">E</div>
+			</section>
+		</div>
+
+		<div class="s03">
+			<section>
+				<div class="A">A</div>
+				<div class="B">B</div>
+				<div class="C">C</div>
+				<div class="D">D</div>
+				<div class="E">E</div>
+			</section>
+		</div>
+	</body>
+</html>

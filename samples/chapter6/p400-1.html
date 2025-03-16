@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			section.s01 {
+				isolation: isolate;
+			}
+			body {
+				background: url(assets/sun.svg);
+			}
+
+			section {
+				display: grid;
+				> * {
+					grid-area: 1 / 1;
+				}
+			}
+
+			img {
+				z-index: 1;
+				mix-blend-mode: ～;
+				scale: 1.25;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 120px;
+					justify-content: center;
+					margin: 40px;
+					font-family: "Prompt", sans-serif;
+				}
+				div {
+					display: grid;
+					place-items: center;
+					width: 300px;
+					height: 180px;
+					background-image: url(assets/home.jpg);
+					background-size: cover;
+					background-position: 0 -20px;
+					color: white;
+					font-size: 36px;
+					font-weight: bold;
+					text-shadow: 0 0 10px black;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div>HOME OFFICE</div>
+			<img src="assets/grad.png" alt="" style="mix-blend-mode: multiply" />
+		</section>
+
+		<section class="s01">
+			<div>HOME OFFICE</div>
+			<img src="assets/grad.png" alt="" style="mix-blend-mode: multiply" />
+		</section>
+	</body>
+</html>

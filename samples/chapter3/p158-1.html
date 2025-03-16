@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			button.btn {
+				color: white;
+				background-color: black;
+			}
+
+			.danger {
+				background-color: red;
+			}
+
+			/* base */
+			button,
+			a:where(.btn) {
+				display: inline-block;
+				padding: 8px 32px;
+				cursor: pointer;
+				border: none;
+				border-radius: 8px;
+			}
+
+			body {
+				margin: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="btn">登録</button>
+		<button class="btn danger">削除</button>
+	</body>
+</html>

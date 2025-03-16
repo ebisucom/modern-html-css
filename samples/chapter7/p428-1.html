@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			:root {
+				interpolate-size: allow-keywords;
+			}
+
+			.post {
+				height: 100px;
+				overflow: clip;
+				transition: height 1s;
+
+				&.show {
+					height: auto;
+				}
+			}
+
+			/* base */
+			@layer base {
+				article {
+					display: grid;
+					justify-items: center;
+					max-width: 600px;
+					margin: auto;
+				}
+
+				button {
+					width: 280px;
+					padding: 14px 24px;
+					border: none;
+					background-color: gold;
+					border-radius: 8px;
+					cursor: pointer;
+					font-weight: bold;
+				}
+
+				.post {
+					font-size: 16px;
+					line-height: 1.6;
+
+					> :first-child {
+						margin-top: 0;
+					}
+
+					p {
+						margin-block: 1em;
+					}
+
+					/* グラデーションオーバーレイ */
+					position: relative;
+
+					&::after {
+						position: absolute;
+						display: block;
+						content: "";
+						bottom: 0;
+						left: 0;
+						right: 0;
+						height: 75px;
+						background: linear-gradient(rgb(255 255 255 / 0) 0%, rgb(255 255 255 / 0.8) 50%, #fff 100%);
+						transition: opacity 1s;
+					}
+
+					&.show::after {
+						opacity: 0;
+						pointer-events: none;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<article>
+			<div class="post">
+				<p>
+					ホームオフィスは単なる生活空間の一角ではなく、あなたの職業生活の中心となります。
+					適切にデザインされた作業空間は、生産性、快適性、そして全体的な仕事の満足度に重要な役割を果たします。
+					私たちのオフィスデザインサービスは、あなたのホームオフィスを効率と創造性の源へと変貌させることを目的としています。
+					洗練されたデザインのホームオフィスは、単なる美しさ以上のものです。それは 生産性の向上や集中力の強化、より良いワークライフバランスの促進、
+					オンライン通話中のイメージの反映など、あなた独自の作業スタイルとニーズに適応した環境を作り出すことだからです。
+				</p>
+			</div>
+			<button>続きを読む</button>
+		</article>
+
+		<script>
+			const button = document.querySelector("button")
+			const post = document.querySelector(".post")
+
+			button.addEventListener("click", () => {
+				post.classList.toggle("show")
+
+				if (post.classList.contains("show")) {
+					button.textContent = "閉じる"
+				} else {
+					button.textContent = "続きを読む"
+				}
+			})
+		</script>
+	</body>
+</html>

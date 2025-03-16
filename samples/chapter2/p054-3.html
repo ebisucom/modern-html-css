@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			table {
+				border-collapse: collapse;
+
+				th,
+				td {
+					padding: 8px 28px;
+					border: solid 2px black;
+				}
+
+				thead {
+					border-bottom: solid 4px black;
+				}
+				tfoot {
+					border-top: solid 4px black;
+				}
+				colgroup:first-of-type {
+					border-right: solid 4px black;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<caption>
+				プランの比較
+			</caption>
+			<colgroup></colgroup>
+			<colgroup span="3"></colgroup>
+			<thead>
+				<tr>
+					<th scope="row">プラン</th>
+					<th>A</th>
+					<th>B</th>
+					<th>C</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>初期費用（円）</th>
+					<td>2,000</td>
+					<td>5,000</td>
+					<td>7,000</td>
+				</tr>
+				<tr>
+					<th>月額費用（円）</th>
+					<td>1,000</td>
+					<td>1,500</td>
+					<td>2,000</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th>合計（円）</th>
+					<td>3,000</td>
+					<td>6,500</td>
+					<td>9,000</td>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>

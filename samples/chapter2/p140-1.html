@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+		<style>
+			::backdrop {
+				background-color: rgb(0 0 0 / 0.6);
+			}
+
+			[popovertargetaction="hide"] {
+				position: absolute;
+				top: 12px;
+				right: 12px;
+				filter: grayscale(1);
+			}
+
+			/* base */
+			@layer base {
+				* {
+					box-sizing: border-box;
+					font-family: outfit, sans-serif;
+				}
+
+				[popover] {
+					width: min(80vw, 400px);
+					padding: 20px 32px;
+				}
+
+				[popovertargetaction="hide"] {
+					position: absolute;
+					top: 12px;
+					right: 12px;
+					filter: grayscale(1);
+				}
+
+				button {
+					margin: 0;
+					font-family: inherit;
+					font-size: 100%;
+					font-weight: inherit;
+					color: inherit;
+					background-color: transparent;
+					background-image: none;
+					cursor: pointer;
+					border: none;
+					-webkit-tap-highlight-color: transparent;
+					-webkit-touch-callout: none;
+				}
+
+				[popovertarget]:not([popovertargetaction]) {
+					padding: 14px 24px;
+					line-height: 1;
+					background-color: lightgreen;
+					border-color: transparent;
+					border-radius: 8px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<button popovertarget="message">メッセージ</button>
+
+		<div popover id="message">
+			<h2>Welcome!</h2>
+			<button popovertarget="message" popovertargetaction="hide" aria-label="閉じる">
+				<span aria-hidden="true">❌️</span>
+			</button>
+		</div>
+	</body>
+</html>

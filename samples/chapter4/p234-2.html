@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			h1 {
+				margin-block: 16px;
+			}
+
+			p {
+				margin-block: 12px;
+			}
+
+			hgroup {
+				margin-trim: block;
+				margin-block: 0px;
+				background-color: lemonchiffon;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 0;
+				}
+				h1 {
+					line-height: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<hgroup>
+			<h1>Home</h1>
+			<p>ホーム</p>
+		</hgroup>
+	</body>
+</html>

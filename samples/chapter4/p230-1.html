@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				h1 {
+					width: max-content;
+					height: auto;
+					background: #8df3ff;
+				}
+			}
+
+			.s02 {
+				h1 {
+					width: calc-size(max-content, size + 50px);
+					height: calc-size(auto, size * 2);
+					background: #8df3ff;
+				}
+			}
+
+			div {
+				border: solid 4px royalblue;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 20px;
+
+					> * + * {
+						margin-top: 40px;
+					}
+				}
+
+				h1 {
+					margin: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<h1>Home Office</h1>
+		</div>
+
+		<div class="s02">
+			<h1>Home Office</h1>
+		</div>
+	</body>
+</html>

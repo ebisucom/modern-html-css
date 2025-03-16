@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+					justify-items: start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<select name="fruits">
+			<option value="orange">オレンジ</option>
+			<option value="banana" selected>バナナ</option>
+			<option value="apple">林檎</option>
+		</select>
+
+		<select name="fruits">
+			<optgroup label="定番">
+				<option value="orange">オレンジ</option>
+				<option value="banana">バナナ</option>
+			</optgroup>
+			<optgroup label="季節限定">
+				<option value="apple">林檎</option>
+				<option value="orange">イチゴ</option>
+			</optgroup>
+		</select>
+
+		<select name="fruits" size="3" multiple>
+			<option value="orange">オレンジ</option>
+			<option value="banana">バナナ</option>
+			<option value="apple">林檎</option>
+		</select>
+	</body>
+</html>

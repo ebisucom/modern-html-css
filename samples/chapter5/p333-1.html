@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			span {
+				font-family: "Corbel";
+				font-variant-position: super;
+			}
+
+			/* base */
+			@layer base {
+				p {
+					font-family: "Corbel";
+					font-size: 50px;
+
+					span {
+						color: red;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p>a<span>2</span></p>
+	</body>
+</html>

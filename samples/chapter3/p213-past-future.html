@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			video {
+				width: 100%;
+				height: auto;
+			}
+
+			::cue(:past) {
+				color: white;
+			}
+
+			::cue(:future) {
+				color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<video src="assets/home.mp4" controls width="640" height="360">
+			<track kind="captions" src="assets/track-past-feature.vtt" srclang="ja" label="キャプション" default />
+		</video>
+		<p>※字幕を表示するにはサーバー環境での実行が必要です</p>
+	</body>
+</html>

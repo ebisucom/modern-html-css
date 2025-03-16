@@ -1,0 +1,62 @@
+@view-transition {
+	navigation: auto;
+}
+
+html:active-view-transition-type(forwards, backwards) {
+	/* 詳細の画像に遷移名を指定 */
+	article img {
+		view-transition-name: photo;
+	}
+
+	/* 遷移アニメーションの再生時間 */
+	&::view-transition-group(*) {
+		animation-duration: 0.5s;
+	}
+}
+
+html:active-view-transition-type(forwards) {
+	/* 遷移タイプがforwardsのときに適用するアニメーション */
+	&::view-transition-old(root) {
+		animation-name: fade-to-black;
+	}
+
+	&::view-transition-new(root) {
+		animation-name: slide-in-from-right;
+	}
+}
+
+html:active-view-transition-type(backwards) {
+	/* 遷移タイプがbackwardsのときに適用するアニメーション */
+	&::view-transition-old(root) {
+		z-index: 1;
+		animation-name: slide-out-to-right;
+	}
+
+	&::view-transition-new(root) {
+		animation-name: fade-from-black;
+	}
+}
+
+@keyframes slide-in-from-right {
+	0% {
+		translate: 100% 0;
+	}
+}
+
+@keyframes slide-out-to-right {
+	100% {
+		translate: 100% 0;
+	}
+}
+
+@keyframes fade-to-black {
+	100% {
+		filter: brightness(0.8);
+	}
+}
+
+@keyframes fade-from-black {
+	0% {
+		filter: brightness(0.8);
+	}
+}

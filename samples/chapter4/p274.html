@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				section {
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					grid-template-rows: masonry;
+					gap: 10px;
+				}
+			}
+
+			.s02 {
+				section {
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					grid-template-rows: masonry;
+					gap: 10px;
+				}
+
+				img:nth-child(2) {
+					grid-column: span 2;
+				}
+			}
+
+			.s03 {
+				section {
+					display: grid;
+					grid-template-columns: masonry;
+					grid-template-rows: 1fr 1fr 1fr;
+					gap: 10px;
+
+					img {
+						width: auto;
+						height: 200px;
+					}
+				}
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					grid-template-columns: minmax(0, auto);
+					gap: 100px;
+				}
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<section>
+				<img src="assets/photo01.jpg" alt="photo01" />
+				<img src="assets/photo02.jpg" alt="photo02" />
+				<img src="assets/photo03.jpg" alt="photo03" />
+				<img src="assets/photo04.jpg" alt="photo04" />
+				<img src="assets/photo05.jpg" alt="photo05" />
+				<img src="assets/photo06.jpg" alt="photo06" />
+			</section>
+		</div>
+
+		<div class="s02">
+			<section>
+				<img src="assets/photo01.jpg" alt="photo01" />
+				<img src="assets/photo02.jpg" alt="photo02" />
+				<img src="assets/photo03.jpg" alt="photo03" />
+				<img src="assets/photo04.jpg" alt="photo04" />
+				<img src="assets/photo05.jpg" alt="photo05" />
+				<img src="assets/photo06.jpg" alt="photo06" />
+			</section>
+		</div>
+
+		<div class="s03">
+			<section>
+				<img src="assets/photo01.jpg" alt="photo01" />
+				<img src="assets/photo02.jpg" alt="photo02" />
+				<img src="assets/photo03.jpg" alt="photo03" />
+				<img src="assets/photo04.jpg" alt="photo04" />
+				<img src="assets/photo05.jpg" alt="photo05" />
+				<img src="assets/photo06.jpg" alt="photo06" />
+			</section>
+		</div>
+	</body>
+</html>

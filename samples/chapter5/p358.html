@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<style>
+			.t01 {
+				text-decoration: underline;
+			}
+
+			.t02 {
+				text-decoration: underline overline;
+			}
+
+			.t03 {
+				text-decoration: underline wavy 5px red;
+			}
+
+			.t04 {
+				-webkit-text-decoration: underline wavy red;
+				text-decoration-thickness: 5px;
+			}
+
+			.t05 {
+				text-decoration-line: underline;
+				text-decoration-style: wavy;
+				text-decoration-thickness: 5px;
+				text-decoration-color: red;
+			}
+
+			/* base */
+			@layer base {
+				div {
+					margin-bottom: 30px;
+					padding: 5px 10px;
+					font-size: 32px;
+					background: #f3c90b;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="t01">快適なホームオフィス</h1>
+		<h1 class="t02">快適なホームオフィス</h1>
+		<h1 class="t03">快適なホームオフィス</h1>
+		<h1 class="t04">快適なホームオフィス</h1>
+		<h1 class="t05">快適なホームオフィス</h1>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+					justify-items: start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<form id="contact">
+			<input type="hidden" name="form" value="contact" />
+		</form>
+		<input type="text" name="テキスト" form="contact" />
+
+		<form action="/login">
+			<input type="submit" value="登録済みの方" />
+			<input type="submit" value="はじめての方" formaction="/signup" />
+		</form>
+
+		<form>
+			<input type="date" name="～" min="2024-12-01" max="2024-12-20" step="2" />
+		</form>
+
+		<form>
+			<input type="text" name="～" minlength="10" maxlength="15" size="15" />
+			<input type="submit" />
+		</form>
+	</body>
+</html>

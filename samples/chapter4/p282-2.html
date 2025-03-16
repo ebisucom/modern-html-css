@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.A {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 4;
+			}
+
+			.B {
+				position: absolute;
+				top: 100px;
+				left: 50px;
+				z-index: 3;
+			}
+
+			.C {
+				position: absolute;
+				top: 25px;
+				left: 150px;
+				z-index: 2;
+			}
+
+			/* base */
+			@layer base, color;
+			@layer color {
+				section {
+					.A {
+						background-color: lch(from peachpuff l c calc(h - 300));
+					}
+
+					.B {
+						background-color: lch(from peachpuff l c calc(h - 100) / 0.9);
+					}
+
+					.C {
+						background-color: rgb(from yellow r g b / 0.9);
+					}
+				}
+			}
+
+			@layer base {
+				* {
+					box-sizing: border-box;
+				}
+
+				section {
+					position: relative;
+					height: 280px;
+					font-weight: bold;
+					text-align: center;
+
+					div {
+						width: 180px;
+						height: 124px;
+						font-family: outfit, sans-serif;
+						font-size: 20px;
+						font-weight: bold;
+						text-align: center;
+						align-content: center;
+
+						span {
+							display: block;
+							font-size: 16px;
+							font-weight: normal;
+						}
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="A" style="z-index: auto">A</div>
+			<div class="B" style="z-index: auto">B</div>
+			<div class="C" style="z-index: auto">C</div>
+		</section>
+
+		<section>
+			<div class="A">A <span>z-index: 4</span></div>
+			<div class="B">B <span>z-index: 3</span></div>
+			<div class="C">C <span>z-index: 2</span></div>
+		</section>
+	</body>
+</html>

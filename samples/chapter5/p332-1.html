@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			p {
+				font-family: "Playfair Display";
+			}
+
+			.none {
+				font-variant-ligatures: none;
+			}
+
+			.liga {
+				font-variant-ligatures: common-ligatures;
+			}
+
+			.dlig {
+				font-variant-ligatures: common-ligatures discretionary-ligatures;
+			}
+
+			/* base */
+			@layer base {
+				p {
+					font-size: 50px;
+					color: red;
+
+					span {
+						color: black;
+					}
+				}
+
+				@font-face {
+					font-family: "Playfair Display";
+					src: url(fonts/PlayfairRomanVF.woff2);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="none">ffi ft ct sp st</p>
+		<p class="liga">ffi ft ct sp st</p>
+		<p class="dlig">ffi ft ct sp st</p>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			p {
+				background-color: peachpuff;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Action</h1>
+		<p>環境構築を行います</p>
+		<custom-attention></custom-attention>
+
+		<script>
+			// カスタム要素のためのクラスを定義
+			class CustomAttention extends HTMLElement {
+				constructor() {
+					super()
+					// HTMLを追加する
+					this.innerHTML = `
+						<style>
+							p {background-color: yellow;}
+						</style>
+						<p>※予告なく変更される場合があります</p>
+					`
+				}
+			}
+
+			// カスタム要素を登録する
+			customElements.define("custom-attention", CustomAttention)
+		</script>
+	</body>
+</html>

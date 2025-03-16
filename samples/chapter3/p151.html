@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.container > section h3::first-letter {
+				background-color: yellow;
+			}
+
+			/* base */
+			@layer base {
+				p {
+					margin: 0.25em 0;
+				}
+				h2,
+				h3 {
+					margin: 1em 0 0.25em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2>ホームオフィス</h2>
+			<p>自宅で快適に働く環境を作る</p>
+			<p>環境づくりに必要なこと</p>
+			<section>
+				<h3>空間づくり</h3>
+				<p>専用のスペースを確保する</p>
+			</section>
+		</div>
+	</body>
+</html>

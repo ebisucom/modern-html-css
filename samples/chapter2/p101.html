@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				body,
+				form {
+					display: grid;
+					gap: 40px;
+					justify-items: start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<input name="name" dirname="name-dir" />
+
+			<input name="disabled" value="太郎" disabled />
+
+			<input name="readonly" value="太郎" readonly />
+
+			<input type="submit" />
+		</form>
+	</body>
+</html>

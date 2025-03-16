@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button id="myButton">クリックしてください</button>
+
+		<script>
+			// ボタン要素を取得
+			const button = document.getElementById("myButton")
+
+			// clickイベントリスナーを登録
+			button.addEventListener("click", function () {
+				// ボタンの背景色を黄色に設定
+				this.style.backgroundColor = "yellow"
+			})
+		</script>
+	</body>
+</html>

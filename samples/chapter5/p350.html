@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			div.s01 {
+				text-align: left;
+			}
+			div.s02 {
+				text-align: right;
+			}
+			div.s03 {
+				text-align: center;
+			}
+			div.s04 {
+				text-align: justify;
+			}
+
+			div.s05 {
+				text-align: start;
+
+				h1 {
+					text-align: inherit;
+				}
+			}
+
+			div.s06 {
+				text-align: start;
+
+				h1 {
+					text-align: -webkit-match-parent;
+					text-align: match-parent;
+				}
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+				div {
+					margin-bottom: 30px;
+				}
+				h1 {
+					margin: 10px 0;
+					padding: 5px 10px;
+					font-size: 20px;
+					background: #f3c90b;
+				}
+				p {
+					margin: 0;
+					padding: 10px;
+					font-size: 16px;
+					border: solid 2px #ff8e52;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<h1>ホームオフィス</h1>
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。アシスタントも待っています。</p>
+		</div>
+
+		<div class="s02">
+			<h1>ホームオフィス</h1>
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。アシスタントも待っています。</p>
+		</div>
+
+		<div class="s03">
+			<h1>ホームオフィス</h1>
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。アシスタントも待っています。</p>
+		</div>
+
+		<div class="s04">
+			<h1>ホームオフィス</h1>
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。アシスタントも待っています。</p>
+		</div>
+
+		<div dir="ltr" class="s05">
+			<h1 dir="rtl">ホームオフィス</h1>
+		</div>
+
+		<div dir="ltr" class="s06">
+			<h1 dir="rtl">ホームオフィス</h1>
+		</div>
+	</body>
+</html>

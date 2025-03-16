@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			div.s01 {
+				background-attachment: fixed;
+				overflow: auto;
+				scrollbar-color: white gray;
+			}
+
+			div {
+				background-image: url(assets/home.jpg);
+				background-repeat: no-repeat;
+				width: 320px;
+				height: 100px;
+				padding: 20px;
+				border: solid 20px rgb(171 207 62 / 1);
+				color: white;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					font-family: "Prompt", sans-serif;
+					margin-bottom: 1000px;
+				}
+
+				div {
+					font-size: 70px;
+					font-weight: bold;
+					text-align: center;
+					line-height: 1.6;
+				}
+				p {
+					line-height: 1.8;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Attachment</h1>
+
+		<div class="s01">HOME Office</div>
+
+		<p>
+			ホームオフィスは単なる生活空間の一角ではなく、あなたの職業生活の中心となります。
+			適切に<strong>デザインされた作業空間</strong>は、生産性、快適性、そして全体的な仕事の満足度に重要な役割を果たします。
+			私たちのオフィスデザインサービスは、あなたのホームオフィスを効率と創造性の源へと変貌させることを目的としています。
+		</p>
+		<p>
+			洗練されたデザインのホームオフィスは、単なる美しさ以上のものです。それは 生産性の向上や集中力の強化、より良いワークライフバランスの促進、
+			オンライン通話中のイメージの反映など、あなた独自の作業スタイルとニーズに適応した環境を作り出すことだからです。
+		</p>
+	</body>
+</html>

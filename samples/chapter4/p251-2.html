@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+
+		<style>
+			h1 {
+				writing-mode: vertical-rl;
+			}
+
+			.s01 span {
+				text-combine-upright: none;
+			}
+
+			.s02 span {
+				text-combine-upright: all;
+			}
+
+			/* base */
+			@layer base {
+				* {
+					box-sizing: border-box;
+				}
+
+				body {
+					display: flex;
+					gap: 20px;
+				}
+
+				h1 {
+					margin: 0;
+					padding: 5px 10px;
+					border: solid 4px royalblue;
+					font-weight: normal;
+				}
+
+				span {
+					margin-inline: 0.1em;
+					padding: 0.1em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="s01">年越し<span>Party</span><span>12</span>月<span>31</span>日</h1>
+		<h1 class="s02">年越し<span>Party</span><span>12</span>月<span>31</span>日</h1>
+	</body>
+</html>

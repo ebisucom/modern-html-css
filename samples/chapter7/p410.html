@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			div {
+				height: 100px;
+				padding: 20px;
+				border: solid 10px #d2f36d;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 80px;
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+				div {
+					width: 178px;
+				}
+				p {
+					margin: 0;
+					line-height: 1.8em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div style="overflow: visible">
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるホームアシスタントも充実してきています。</p>
+		</div>
+
+		<div style="overflow: clip">
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるホームアシスタントも充実してきています。</p>
+		</div>
+
+		<div style="overflow: hidden">
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるホームアシスタントも充実してきています。</p>
+		</div>
+
+		<div style="overflow: scroll">
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるホームアシスタントも充実してきています。</p>
+		</div>
+
+		<div style="overflow: auto">
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるホームアシスタントも充実してきています。</p>
+		</div>
+	</body>
+</html>

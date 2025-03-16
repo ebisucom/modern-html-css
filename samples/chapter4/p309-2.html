@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			table {
+				border-spacing: 0px;
+			}
+
+			.s02 {
+				tr:nth-child(2) {
+					visibility: hidden;
+				}
+			}
+
+			.s03 {
+				tr:nth-child(2) {
+					visibility: collapse;
+				}
+			}
+
+			/* base */
+			@layer base {
+				div {
+					margin-bottom: 40px;
+				}
+
+				table,
+				td,
+				th {
+					border: solid 1px black;
+				}
+				th,
+				td {
+					padding: 8px 20px;
+				}
+
+				tr:nth-child(1) {
+					background-color: yellow;
+				}
+
+				tr:nth-child(2) {
+					background-color: orange;
+				}
+
+				tr:nth-child(3) {
+					background-color: pink;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<table>
+				<tr>
+					<th>プラン</th>
+					<th>A</th>
+					<th>B</th>
+					<th>C</th>
+				</tr>
+				<tr>
+					<th>初期費用</th>
+					<td>2,000</td>
+					<td>5,000</td>
+					<td>7,000</td>
+				</tr>
+				<tr>
+					<th>オプション</th>
+					<td>1,000</td>
+					<td>2,000</td>
+					<td>3,000</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="s02">
+			<table>
+				<tr>
+					<th>プラン</th>
+					<th>A</th>
+					<th>B</th>
+					<th>C</th>
+				</tr>
+				<tr>
+					<th>初期費用</th>
+					<td>2,000</td>
+					<td>5,000</td>
+					<td>7,000</td>
+				</tr>
+				<tr>
+					<th>オプション</th>
+					<td>1,000</td>
+					<td>2,000</td>
+					<td>3,000</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="s03">
+			<table>
+				<tr>
+					<th>プラン</th>
+					<th>A</th>
+					<th>B</th>
+					<th>C</th>
+				</tr>
+				<tr>
+					<th>初期費用</th>
+					<td>2,000</td>
+					<td>5,000</td>
+					<td>7,000</td>
+				</tr>
+				<tr>
+					<th>オプション</th>
+					<td>1,000</td>
+					<td>2,000</td>
+					<td>3,000</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

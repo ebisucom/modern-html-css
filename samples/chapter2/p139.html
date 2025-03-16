@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; 
+				script-src 'nonce-Su8BQbVtkk56r5UsvFqs3d4r';
+				style-src 'nonce-Ld7kWjXqTCpf5a7fukpqW2Fm'"
+		/>
+		<style nonce="Ld7kWjXqTCpf5a7fukpqW2Fm">
+			body {
+				background-color: pink;
+			}
+		</style>
+		<style>
+			body {
+				background-color: skyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>nonce</h1>
+		<script nonce="Su8BQbVtkk56r5UsvFqs3d4r">
+			document.querySelector("h1").style.color = "red"
+		</script>
+		<script>
+			document.querySelector("h1").style.color = "blue"
+		</script>
+	</body>
+</html>

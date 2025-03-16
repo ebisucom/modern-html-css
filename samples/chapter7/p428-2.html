@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			:root {
+				interpolate-size: allow-keywords;
+			}
+
+			details::details-content {
+				height: 0px;
+				overflow: clip;
+				transition: height 1s, content-visibility 1s allow-discrete;
+			}
+
+			details[open]::details-content {
+				height: auto;
+			}
+
+			/* base */
+			@layer base {
+				details {
+					padding: 10px 20px;
+					border-radius: 8px;
+					background-color: peachpuff;
+
+					summary {
+						cursor: pointer;
+						font-size: larger;
+					}
+
+					::marker {
+						color: deeppink;
+					}
+
+					p {
+						margin: 0;
+						padding: 10px 0;
+						box-sizing: border-box;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<details>
+			<summary>Home Office</summary>
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるAIも充実してきています。</p>
+		</details>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			.s01 a {
+				background: gray;
+				animation: myanim 1s 5s none;
+			}
+
+			.s02 a {
+				background: gray;
+				animation: myanim 1s 5s backwards;
+			}
+
+			.s03 a {
+				background: gray;
+				animation: myanim 1s 5s forwards;
+			}
+
+			.s04 a {
+				background: gray;
+				animation: myanim 1s 5s both;
+			}
+
+			@keyframes myanim {
+				0% {
+					transform: scale(1);
+					background: #abcf3e;
+				}
+
+				50% {
+					background: #fda8ec;
+				}
+
+				100% {
+					transform: scale(1.2);
+					background: #f3c90b;
+				}
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
+					margin: 30px 0;
+					text-align: center;
+				}
+				.container {
+					display: flex;
+					flex-wrap: wrap;
+					width: 300px;
+					margin: auto;
+				}
+				div {
+					margin-bottom: 30px;
+					width: 150px;
+				}
+				a {
+					display: inline-block;
+					-webkit-tap-highlight-color: transparent;
+					-webkit-touch-callout: none;
+					width: 120px;
+					height: 120px;
+					border-radius: 50%;
+					margin: auto;
+					color: #fff;
+					font-size: 32px;
+					font-weight: bold;
+					text-align: center;
+					text-decoration: none;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="s01">
+				<a href="#" ontouchstart>HOME</a>
+			</div>
+
+			<div class="s02">
+				<a href="#" ontouchstart>HOME</a>
+			</div>
+
+			<div class="s03">
+				<a href="#" ontouchstart>HOME</a>
+			</div>
+
+			<div class="s04">
+				<a href="#" ontouchstart>HOME</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				display: flex;
+				flex-direction: row;
+			}
+
+			.s02 {
+				display: flex;
+				flex-direction: row-reverse;
+			}
+
+			.s03 {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.s04 {
+				display: flex;
+				flex-direction: column-reverse;
+			}
+
+			/* base */
+			@layer base, color;
+
+			@layer color {
+				ul {
+					border: solid 4px royalblue;
+				}
+
+				li:nth-child(1) {
+					background-color: yellow;
+				}
+
+				li:nth-child(2) {
+					background-color: orange;
+				}
+
+				li:nth-child(3) {
+					background-color: pink;
+				}
+			}
+
+			@layer base {
+				ul {
+					padding: 0;
+					list-style: none;
+					font-weight: bold;
+				}
+
+				a {
+					color: inherit;
+					text-decoration: inherit;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="s01">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+
+		<ul class="s02">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+
+		<ul class="s03">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+
+		<ul class="s04">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</body>
+</html>

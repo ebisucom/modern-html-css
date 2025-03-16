@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			h1.physical {
+				border-top: solid 4px royalblue;
+				border-bottom: solid 20px royalblue;
+			}
+
+			h1.logical {
+				border-block-start: solid 4px royalblue;
+				border-block-end: solid 20px royalblue;
+			}
+
+			.vertical {
+				writing-mode: vertical-rl;
+				height: calc-size(auto, size + 40px);
+			}
+
+			/* base */
+			@layer base {
+				h1 {
+					margin-block: 40px;
+					padding: 5px;
+					background-color: lightcyan;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="physical">ホームオフィス</h1>
+
+		<div class="vertical">
+			<h1 class="physical">ホームオフィス</h1>
+		</div>
+
+		<h1 class="logical">ホームオフィス</h1>
+
+		<div class="vertical">
+			<h1 class="logical">ホームオフィス</h1>
+		</div>
+	</body>
+</html>

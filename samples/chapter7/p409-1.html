@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				resize: both;
+			}
+			.s02 {
+				resize: vertical;
+			}
+			.s03 {
+				resize: horizontal;
+			}
+			.s04 {
+				resize: none;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 60px;
+					justify-items: left;
+				}
+
+				textarea {
+					width: 200px;
+					min-height: 2lh;
+					padding: 8px;
+					font-size: inherit;
+					line-height: 1.5;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<textarea class="s01">ホームオフィスは単なる生活空間の一角ではなく、職業生活の中心となり、仕事の満足度に重要な役割を果たします。</textarea>
+		<textarea class="s02">ホームオフィスは単なる生活空間の一角ではなく、職業生活の中心となり、仕事の満足度に重要な役割を果たします。</textarea>
+		<textarea class="s03">ホームオフィスは単なる生活空間の一角ではなく、職業生活の中心となり、仕事の満足度に重要な役割を果たします。</textarea>
+		<textarea class="s04">ホームオフィスは単なる生活空間の一角ではなく、職業生活の中心となり、仕事の満足度に重要な役割を果たします。</textarea>
+	</body>
+</html>

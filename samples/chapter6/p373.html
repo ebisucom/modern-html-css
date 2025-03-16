@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				main {
+					counter-reset: item;
+				}
+
+				h2::before {
+					content: counter(item);
+					counter-increment: item;
+				}
+			}
+
+			/* base */
+			@layer base {
+				h2,
+				h3 {
+					margin: 0;
+
+					&::before,
+					&::after {
+						color: red;
+					}
+				}
+				h3 {
+					margin-left: 30px;
+				}
+
+				body {
+					display: grid;
+					gap: 40px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<main>
+				<h2>沖縄</h2>
+				<h2>北海道</h2>
+				<h2>京都</h2>
+			</main>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/p057-base.css" />
+		<style>
+			::backdrop {
+				background-color: rgb(0 0 0 / 0.6);
+			}
+
+			#close {
+				position: absolute;
+				top: 12px;
+				right: 12px;
+				filter: grayscale(1);
+			}
+		</style>
+	</head>
+	<body>
+		<button id="open">開く</button>
+
+		<dialog id="dialog" aria-labelledby="message">
+			<h2 id="message">Get Started!</h2>
+			<button id="close" aria-label="閉じる">
+				<span aria-hidden="true">❌️</span>
+			</button>
+		</dialog>
+
+		<script>
+			const openButton = document.getElementById("open")
+			const closeButton = document.getElementById("close")
+			const dialog = document.getElementById("dialog")
+
+			openButton.addEventListener("click", function () {
+				// 開くボタンをクリックしたら非モーダルダイアログとして開く
+				dialog.show()
+			})
+
+			closeButton.addEventListener("click", function () {
+				// 閉じるボタンをクリックしたらダイアログを閉じる
+				dialog.close("closed")
+			})
+
+			dialog.addEventListener("close", function () {
+				// ダイアログが閉じたらコンソールにreturnValueを表示する
+				console.log(dialog.returnValue)
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+/* 一覧のカードに遷移名を指定 */
+.card:nth-child(1) {
+	view-transition-name: card01;
+}
+
+.card:nth-child(2) {
+	view-transition-name: card02;
+}
+
+.card:nth-child(3) {
+	view-transition-name: card03;
+}
+
+.card:nth-child(4) {
+	view-transition-name: card04;
+}
+
+/* 一覧のカードにビュー遷移クラスを指定 */
+.card {
+	view-transition-class: card;
+}
+
+/* 遷移クラス「card」を持つ古い状態の遷移擬似要素にCSSを適用 */
+html::view-transition-old(*.card) {
+	filter: grayscale(1);
+	animation-name: scale-down;
+}
+
+/* 遷移クラス「card」を持つ新しい状態の遷移擬似要素にCSSを適用 */
+html::view-transition-new(*.card) {
+	filter: grayscale(1);
+	animation-name: scale-up;
+}
+
+@keyframes scale-down {
+	100% {
+		scale: 0;
+	}
+}
+
+@keyframes scale-up {
+	0% {
+		scale: 0;
+	}
+}
+
+/* 遷移する画像は手前に表示 */
+html::view-transition-group(photo) {
+	z-index: 1;
+}

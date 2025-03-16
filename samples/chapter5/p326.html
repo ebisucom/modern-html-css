@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap" rel="stylesheet" />
+		<style>
+			div.s01 {
+				font-family: "AR One Sans", sans-serif;
+				font-weight: bold;
+				font-style: oblique;
+				font-variant: small-caps;
+				font-synthesis: bold style small-caps position;
+			}
+
+			div.s02 {
+				font-family: "AR One Sans", sans-serif;
+				font-weight: bold;
+				font-style: oblique;
+				font-variant: small-caps;
+				font-synthesis: none;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+					color: #333;
+					text-align: center;
+					font-size: 32px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">Comfortable Home Office</div>
+		<div class="s02">Comfortable Home Office</div>
+	</body>
+</html>

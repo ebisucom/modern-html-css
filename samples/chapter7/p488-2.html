@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				div {
+					width: 48px;
+					height: 48px;
+					background: rgb(from gold r g b / 0.8);
+					offset-path: ray(120deg sides);
+					offset-position: top left;
+					offset-distance: 50%;
+					offset-rotate: 0deg;
+					offset-anchor: left bottom;
+					/* animation: move 5s infinite linear; */
+				}
+			}
+
+			.s02 {
+				div {
+					width: 48px;
+					height: 48px;
+					background: rgb(from gold r g b / 0.8);
+					offset: top left ray(120deg sides) 50% 0deg / left bottom;
+					/* animation: move 5s infinite linear; */
+				}
+			}
+
+			@keyframes move {
+				0% {
+					offset-distance: 0%;
+				}
+				100% {
+					offset-distance: 100%;
+				}
+			}
+
+			/* base */
+			@layer base {
+				* {
+					box-sizing: border-box;
+				}
+				section {
+					width: 400px;
+					height: 200px;
+					margin: 60px;
+					border: solid 20px rgb(from lightgreen r g b / 0.8);
+
+					h2 {
+						margin: 0;
+						font-size: 20px;
+						line-height: 1;
+					}
+
+					div {
+						width: 48px;
+						height: 48px;
+						background: rgb(from gold r g b / 0.8);
+					}
+				}
+
+				.s01,
+				.s02 {
+					background-image: url(assets/offset-path02.svg);
+					background-origin: border-box;
+					background-repeat: no-repeat;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section class="s01">
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+
+		<section class="s02">
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			h1 {
+				background: rgb(255 255 255 / 0.5);
+			}
+
+			h1.s01 {
+				backdrop-filter: blur(5px);
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+					margin: 20px;
+				}
+				div {
+					display: grid;
+					place-content: center;
+					width: 300px;
+					height: 180px;
+					background-image: url(assets/home.jpg);
+					margin: 30px auto;
+					background-size: cover;
+					background-position: 0 -20px;
+				}
+				h1 {
+					padding: 40px 20px;
+					font-size: 36px;
+					font-weight: bold;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div><h1>HOME OFFICE</h1></div>
+		<div><h1 class="s01">HOME OFFICE</h1></div>
+	</body>
+</html>

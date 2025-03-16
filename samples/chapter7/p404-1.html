@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			button.s01 {
+				border: solid 8px pink;
+				border-radius: 8px;
+				outline: auto;
+			}
+
+			button.s02 {
+				border: solid 8px pink;
+				border-radius: 8px;
+				outline: solid 4px red;
+			}
+
+			button.s03 {
+				border: solid 8px pink;
+				border-radius: 8px;
+				outline: solid 4px red;
+				outline-offset: 8px;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 40px;
+				}
+				button {
+					color: currentColor;
+					font-size: 100%;
+					font-weight: bold;
+					background: white;
+					margin: 40px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<button class="s01">今すぐはじめる</button>
+		<button class="s02">今すぐはじめる</button>
+		<button class="s03">今すぐはじめる</button>
+	</body>
+</html>

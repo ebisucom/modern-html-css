@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+		<style>
+			h1 {
+				font-size: 32px;
+			}
+			p {
+				font-size: 16px;
+			}
+
+			p.adjust {
+				-webkit-text-size-adjust: none;
+				text-size-adjust: none;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+
+				h1 {
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>快適なホームオフィス</h1>
+
+		<p>
+			家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。作業中のデータはクラウドで管理し、いつでも、どこからでも取り出して作業を進めることができるようにしておきます。作業履歴を残したり、バージョンを管理したりするのもお手の物です。
+		</p>
+
+		<p>そして、使い馴染んだキッチンも本棚もすぐそこにあります。新しい発想が出てこなくなったら、料理をしたり、本を読んだりしてリフレッシュするのもいい考えだと思います。</p>
+
+		<h1>快適なホームオフィス</h1>
+
+		<p class="adjust">
+			家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。作業中のデータはクラウドで管理し、いつでも、どこからでも取り出して作業を進めることができるようにしておきます。作業履歴を残したり、バージョンを管理したりするのもお手の物です。
+		</p>
+
+		<p class="adjust">
+			そして、使い馴染んだキッチンも本棚もすぐそこにあります。新しい発想が出てこなくなったら、料理をしたり、本を読んだりしてリフレッシュするのもいい考えだと思います。
+		</p>
+	</body>
+</html>

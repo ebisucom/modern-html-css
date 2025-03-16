@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			/* cyclic */
+			@counter-style custom01 {
+				system: cyclic;
+				symbols: ★ ☆;
+				suffix: " ";
+			}
+
+			.s01 li {
+				list-style: custom01;
+			}
+
+			/* fixed */
+			@counter-style custom02 {
+				system: fixed;
+				symbols: ★ ☆;
+				suffix: " ";
+			}
+
+			.s02 li {
+				list-style: custom02;
+			}
+
+			/* symbolic */
+			@counter-style custom03 {
+				system: symbolic;
+				symbols: ★ ☆;
+				suffix: " ";
+			}
+
+			.s03 li {
+				list-style: custom03;
+			}
+
+			/* alphabetic */
+			@counter-style custom04 {
+				system: alphabetic;
+				symbols: ★ ☆;
+				suffix: " ";
+			}
+
+			.s04 li {
+				list-style: custom04;
+			}
+
+			/* numeric */
+			@counter-style custom05 {
+				system: numeric;
+				symbols: ★ ☆;
+				suffix: " ";
+			}
+
+			.s05 li {
+				list-style: custom05;
+			}
+
+			/* extends */
+			@counter-style custom06 {
+				system: extends decimal;
+				prefix: "(";
+				suffix: ") ";
+			}
+
+			.s06 li {
+				list-style: custom06;
+			}
+
+			/* additive */
+			@counter-style custom07 {
+				system: additive;
+				additive-symbols: 5 V, 4 IV, 1 I;
+				suffix: " ";
+			}
+
+			.s07 li {
+				list-style: custom07;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+					margin-left: 40px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="s01">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+			<li>東京</li>
+			<li>金沢</li>
+		</ul>
+
+		<ul class="s02">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+			<li>東京</li>
+			<li>金沢</li>
+		</ul>
+
+		<ul class="s03">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+			<li>東京</li>
+			<li>金沢</li>
+		</ul>
+
+		<ul class="s04">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+			<li>東京</li>
+			<li>金沢</li>
+		</ul>
+
+		<ul class="s05">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+			<li>東京</li>
+			<li>金沢</li>
+		</ul>
+
+		<ul class="s06">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+			<li>東京</li>
+			<li>金沢</li>
+		</ul>
+
+		<ul class="s07">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+			<li>東京</li>
+			<li>金沢</li>
+		</ul>
+	</body>
+</html>

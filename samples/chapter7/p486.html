@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			div {
+				width: 48px;
+				height: 48px;
+				background: rgb(from gold r g b / 0.8);
+				offset-path: ray(120deg sides at top left);
+				/* animation: move 5s infinite linear; */
+			}
+
+			.s03 {
+				div {
+					offset-distance: 100%;
+				}
+			}
+
+			.s04 {
+				div {
+					offset-path: ray(120deg sides contain at top left);
+					offset-distance: 100%;
+				}
+			}
+
+			.s05 {
+				div {
+					offset-path: ray(120deg sides);
+					offset-position: top left;
+				}
+			}
+
+			.s06 {
+				div {
+					offset-path: ray(120deg sides);
+					offset-position: auto;
+				}
+			}
+
+			@keyframes move {
+				0% {
+					offset-distance: 0%;
+				}
+				100% {
+					offset-distance: 100%;
+				}
+			}
+
+			/* base */
+			@layer base {
+				* {
+					box-sizing: border-box;
+				}
+				section {
+					width: 400px;
+					height: 200px;
+					margin: 60px;
+					border: solid 20px rgb(from lightgreen r g b / 0.8);
+
+					h2 {
+						margin: 0;
+						font-size: 20px;
+						line-height: 1;
+					}
+
+					div {
+						width: 48px;
+						height: 48px;
+						background: rgb(from gold r g b / 0.8);
+					}
+				}
+
+				.s02,
+				.s03,
+				.s04,
+				.s05 {
+					background-image: url(assets/offset-path02.svg);
+					background-origin: border-box;
+					background-repeat: no-repeat;
+				}
+
+				.s06 {
+					background-image: url(assets/offset-path02.svg);
+					background-position: 0 20px;
+					background-repeat: no-repeat;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section class="s01">
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+
+		<section class="s02">
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+
+		<section class="s03">
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+
+		<section class="s04">
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+
+		<section class="s05">
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+
+		<section class="s06">
+			<h2>Office Design</h2>
+			<div></div>
+		</section>
+	</body>
+</html>

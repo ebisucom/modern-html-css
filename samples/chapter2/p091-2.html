@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+				}
+				label {
+					display: grid;
+					justify-items: start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<label>
+			年月日
+			<input type="date" name="年月日" />
+		</label>
+
+		<label>
+			年月
+			<input type="month" name="年月" />
+		</label>
+
+		<label>
+			週
+			<input type="week" name="週" />
+		</label>
+
+		<label>
+			時間
+			<input type="time" name="時間" />
+		</label>
+
+		<label>
+			日時
+			<input type="datetime-local" name="日時" />
+		</label>
+	</body>
+</html>

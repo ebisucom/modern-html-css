@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<style>
+			html {
+				scroll-padding: auto;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 0 0 1000px;
+					color: #333;
+					font-family: "Prompt", sans-serif;
+				}
+
+				section {
+					color: #fff;
+					font-weight: bold;
+					font-size: 40px;
+					text-align: center;
+					box-sizing: border-box;
+					height: 150px;
+					margin: 20px;
+				}
+
+				.boxA {
+					background: #f3c90b;
+				}
+				.boxB {
+					background: #ff8e52;
+				}
+				.boxC {
+					background: #fda8ec;
+				}
+				.boxD {
+					background: #6cddff;
+				}
+				.boxE {
+					background: #5ca8ee;
+				}
+
+				ul {
+					display: grid;
+					grid-auto-flow: column;
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					font-size: 32px;
+					text-align: center;
+
+					a {
+						color: black;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#A">A</a></li>
+			<li><a href="#B">B</a></li>
+			<li><a href="#C">C</a></li>
+			<li><a href="#D">D</a></li>
+			<li><a href="#E">E</a></li>
+		</ul>
+		<section id="A" class="boxA">A</section>
+		<section id="B" class="boxB">B</section>
+		<section id="C" class="boxC" tabindex="0">C</section>
+		<section id="D" class="boxD">D</section>
+		<section id="E" class="boxE">E</section>
+	</body>
+</html>

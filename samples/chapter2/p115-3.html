@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="host">
+			<template shadowrootmode="open" shadowrootserializable>
+				<input placeholder="テキストを入力" />
+			</template>
+		</div>
+
+		<script>
+			const serialized = document.getElementById("host").getHTML({
+				serializableShadowRoots: true,
+			})
+			console.log(serialized)
+		</script>
+	</body>
+</html>

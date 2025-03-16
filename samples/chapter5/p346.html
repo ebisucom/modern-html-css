@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.break01 {
+				word-break: normal;
+			}
+
+			.break02 {
+				word-break: break-all;
+			}
+
+			.break03 {
+				word-break: keep-all;
+			}
+
+			.break04 {
+				word-break: auto-phrase;
+			}
+
+			/* base */
+			@layer base {
+				div {
+					width: 358px;
+					margin-bottom: 20px;
+					border: solid 4px pink;
+					font-size: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div lang="ja" class="break01">リラックスしながら仕事をする、そんなことが実現可能な世の中になってきました。</div>
+		<div lang="ja" class="break02">リラックスしながら仕事をする、そんなことが実現可能な世の中になってきました。</div>
+		<div lang="ja" class="break03">リラックスしながら仕事をする、そんなことが実現可能な世の中になってきました。</div>
+		<div lang="ja" class="break04">リラックスしながら仕事をする、そんなことが実現可能な世の中になってきました。</div>
+
+		<div class="break01">This is my favorite sandwich with fresh tomato, lettuce, cheese and ham.</div>
+		<div class="break02">This is my favorite sandwich with fresh tomato, lettuce, cheese and ham.</div>
+		<div class="break03">This is my favorite sandwich with fresh tomato, lettuce, cheese and ham.</div>
+		<div class="break04">This is my favorite sandwich with fresh tomato, lettuce, cheese and ham.</div>
+	</body>
+</html>

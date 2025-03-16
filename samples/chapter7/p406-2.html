@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.auto {
+				input,
+				select,
+				button {
+					appearance: auto;
+				}
+			}
+
+			.none {
+				input,
+				select,
+				button {
+					appearance: none;
+				}
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 60px;
+				}
+				form {
+					display: grid;
+					gap: 10px;
+					justify-items: left;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<form class="auto">
+			<input type="text" placeholder="テキスト" />
+			<select name="fruits3">
+				<option value="orange">オレンジ</option>
+				<option value="banana" selected>バナナ</option>
+				<option value="apple">林檎</option>
+			</select>
+			<label><input type="checkbox" checked />オレンジ</label>
+			<button>ボタン</button>
+		</form>
+
+		<form class="none">
+			<input type="text" placeholder="テキスト" />
+			<select name="fruits3">
+				<option value="orange">オレンジ</option>
+				<option value="banana" selected>バナナ</option>
+				<option value="apple">林檎</option>
+			</select>
+			<label><input type="checkbox" checked />オレンジ</label>
+			<button>ボタン</button>
+		</form>
+	</body>
+</html>

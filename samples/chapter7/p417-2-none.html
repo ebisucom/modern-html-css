@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<style>
+			html {
+				overflow-anchor: none;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					margin: 20px 20px 1000px;
+					color: #333;
+					font-family: "Prompt", sans-serif;
+					text-align: center;
+				}
+
+				section {
+					color: #fff;
+					background-color: #666;
+					font-weight: bold;
+					font-size: 40px;
+					text-align: center;
+					box-sizing: border-box;
+					height: 100px;
+					margin: 10px;
+				}
+
+				.boxA {
+					background: #f3c90b;
+				}
+				.boxB {
+					background: #ff8e52;
+				}
+				.boxC {
+					background: #fda8ec;
+				}
+				.boxD {
+					background: #6cddff;
+				}
+				.boxE {
+					background: #5ca8ee;
+				}
+
+				button {
+					font-size: 24px;
+					padding: 5px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section id="A" class="boxA">A</section>
+		<section id="B" class="boxB">B</section>
+		<section id="C" class="boxC">C</section>
+		<button>コンテンツの追加</button>
+
+		<script>
+			const button = document.querySelector("button")
+			const boxA = document.querySelector(".boxA")
+
+			button.addEventListener("click", function () {
+				const newSection = document.createElement("section")
+				newSection.textContent = "Contents"
+				boxA.insertAdjacentElement("afterend", newSection)
+			})
+		</script>
+	</body>
+</html>

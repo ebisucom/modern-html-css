@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01::before {
+				content: normal;
+				color: red;
+			}
+			.s02::before {
+				content: none;
+				color: red;
+			}
+			.s03::before {
+				content: "New";
+				color: red;
+			}
+			.s04::before {
+				content: url(assets/mark.svg);
+				color: red;
+			}
+			.s05::before {
+				content: attr(data-type);
+				color: red;
+			}
+			.s06::before {
+				content: open-quote;
+				color: red;
+			}
+			.s07::before {
+				content: counter(my-counter);
+				color: red;
+			}
+			.s08::before {
+				content: "New" attr(data-type) / "新着情報";
+				color: red;
+			}
+			.s09::before {
+				content: url(assets/mark.svg);
+				display: inline-block;
+				width: 48px;
+				height: 60px;
+				border: solid 4px royalblue;
+			}
+			.s10::before {
+				content: url(assets/mark2.svg);
+				display: inline-block;
+				width: 48px;
+				height: 48px;
+				border: solid 4px royalblue;
+			}
+			.s11 {
+				content: url(assets/mark.svg) / "ヘルプ";
+			}
+		</style>
+	</head>
+	<body>
+		<h1 data-type="☀" class="s01">Home</h1>
+		<h1 data-type="☀" class="s02">Home</h1>
+		<h1 data-type="☀" class="s03">Home</h1>
+		<h1 data-type="☀" class="s04">Home</h1>
+		<h1 data-type="☀" class="s05">Home</h1>
+		<h1 data-type="☀" class="s06">Home</h1>
+		<h1 data-type="☀" class="s07">Home</h1>
+		<h1 data-type="☀" class="s08">Home</h1>
+
+		<hr />
+
+		<h1 class="s09">Home</h1>
+		<h1 class="s10">Home</h1>
+
+		<hr />
+
+		<h1 class="s11">Home</h1>
+	</body>
+</html>

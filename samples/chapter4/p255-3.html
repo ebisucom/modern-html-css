@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			caption {
+				caption-side: bottom;
+			}
+
+			/* base */
+			@layer base {
+				table {
+					border: solid 2px limegreen;
+				}
+
+				th {
+					border: solid 2px dodgerblue;
+				}
+				td {
+					border: solid 2px orange;
+				}
+
+				th,
+				td {
+					padding: 8px 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<caption>
+				プランの比較
+			</caption>
+			<tr>
+				<th></th>
+				<th>A</th>
+				<th>B</th>
+				<th>C</th>
+			</tr>
+			<tr>
+				<th>初期費用</th>
+				<td>2,000</td>
+				<td>5,000</td>
+				<td>7,000</td>
+			</tr>
+		</table>
+	</body>
+</html>

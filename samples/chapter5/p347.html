@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.break01 {
+			}
+
+			.break02 {
+				word-break: break-all;
+			}
+
+			.break03 {
+				overflow-wrap: anywhere;
+			}
+
+			.break04 {
+				overflow-wrap: break-word;
+			}
+
+			/* base */
+			@layer base {
+				div {
+					/* width: min-content; */
+					width: 300px;
+					margin-bottom: 20px;
+					border: solid 4px pink;
+					font-size: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="break01">My favorite sandwich with fresh tomato and ham! https://example.org/freshsandwich/</div>
+		<div class="break02">My favorite sandwich with fresh tomato and ham! https://example.org/freshsandwich/</div>
+		<div class="break03">My favorite sandwich with fresh tomato and ham! https://example.org/freshsandwich/</div>
+		<div class="break04">My favorite sandwich with fresh tomato and ham! https://example.org/freshsandwich/</div>
+	</body>
+</html>

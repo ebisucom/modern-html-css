@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			div.s01 {
+				background-origin: border-box;
+			}
+			div.s02 {
+				background-origin: padding-box;
+			}
+			div.s03 {
+				background-origin: content-box;
+			}
+
+			.large div {
+				background-image: url(assets/home.jpg);
+				background-repeat: no-repeat;
+				width: 320px;
+				height: 100px;
+				padding: 20px;
+				border: solid 20px rgb(171 207 62 / 0.5);
+				color: transparent;
+			}
+
+			.small div {
+				background-image: url(assets/music.jpg);
+				background-repeat: no-repeat;
+				width: 320px;
+				height: 100px;
+				padding: 20px;
+				border: solid 20px rgb(171 207 62 / 0.5);
+				color: transparent;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					font-family: "Prompt", sans-serif;
+					font-weight: bold;
+					font-size: 70px;
+					text-align: center;
+				}
+				.large,
+				.small {
+					display: grid;
+					gap: 20px;
+				}
+				.container {
+					display: flex;
+					gap: 40px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="large">
+				<div class="s01">HOME</div>
+				<div class="s02">HOME</div>
+				<div class="s03">HOME</div>
+			</div>
+
+			<div class="small">
+				<div class="s01">HOME</div>
+				<div class="s02">HOME</div>
+				<div class="s03">HOME</div>
+			</div>
+		</div>
+	</body>
+</html>

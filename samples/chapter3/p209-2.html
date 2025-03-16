@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+		<style>
+			html {
+				container-type: scroll-state;
+			}
+
+			button {
+				opacity: 0;
+				transition: opacity 1s;
+
+				@container scroll-state(scrollable: top) {
+					opacity: 1;
+				}
+			}
+
+			/* base */
+			@layer base, button, scroll-animation;
+
+			@layer base {
+				* {
+					box-sizing: border-box;
+				}
+
+				body {
+					color: #333;
+					font-family: "Outfit", sans-serif;
+				}
+
+				h1 {
+					font-size: 56px;
+				}
+
+				p {
+					line-height: 1.8;
+				}
+
+				img {
+					width: 100%;
+					height: auto;
+					aspect-ratio: 16 / 9;
+					object-fit: cover;
+					margin-block: 20px;
+				}
+
+				.boxA {
+					background: #f3c90b;
+				}
+				.boxB {
+					background: #ff8e52;
+				}
+				.boxC {
+					background: #fda8ec;
+				}
+				.boxD {
+					background: #6cddff;
+				}
+				.boxE {
+					background: #5ca8ee;
+				}
+
+				button {
+					position: fixed;
+					right: 10px;
+					bottom: 10px;
+					width: 48px;
+					aspect-ratio: 1;
+					border: none;
+					border-radius: 50%;
+					background-color: white;
+					cursor: pointer;
+				}
+			}
+
+			@layer scroll-animation {
+				html {
+					scroll-timeline: --viewport-timeline;
+				}
+
+				body {
+					animation: scale-color linear both;
+					animation-timeline: --viewport-timeline;
+					animation-range: 25% 100%;
+				}
+
+				@keyframes scale-color {
+					0% {
+						background-color: #abcf3e;
+					}
+
+					50% {
+						background-color: #fda8ec;
+					}
+
+					100% {
+						background-color: #f3c90b;
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Office Design</h1>
+			<p>
+				ホームオフィスは単なる生活空間の一角ではなく、あなたの職業生活の中心となります。
+				適切にデザインされた作業空間は、生産性、快適性、そして全体的な仕事の満足度に重要な役割を果たします。
+				私たちのオフィスデザインサービスは、あなたのホームオフィスを効率と創造性の源へと変貌させることを目的としています。
+			</p>
+			<img src="./assets/office.jpg" width="1980" height="1414" alt="" />
+			<p>
+				洗練されたデザインのホームオフィスは、単なる美しさ以上のものです。それは 生産性の向上や集中力の強化、より良いワークライフバランスの促進、
+				オンライン通話中のイメージの反映など、あなた独自の作業スタイルとニーズに適応した環境を作り出すことだからです。
+			</p>
+			<p>専門のデザイナーがさまざまな要件を考慮してデザインプランを作成し、理想的なホームオフィスの実現をサポートします。</p>
+		</main>
+
+		<button aria-label="トップへ戻る">
+			<svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+			</svg>
+		</button>
+
+		<script>
+			const button = document.querySelector("button")
+			button.addEventListener("click", function () {
+				window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			.s00 li {
+				list-style-type: disc;
+			}
+			.s01 li {
+				list-style-type: lower-roman;
+			}
+			.s02 li {
+				list-style-type: "★";
+			}
+			.s03 li {
+				list-style-type: none;
+			}
+			.s04 li {
+				list-style-image: url(assets/marker.svg);
+			}
+
+			/* base */
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+					margin: 40px;
+					font-family: "Prompt", sans-serif;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="s00">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+		</ul>
+
+		<ul class="s01">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+		</ul>
+
+		<ul class="s02">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+		</ul>
+
+		<ul class="s03">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+		</ul>
+
+		<ul class="s04">
+			<li>沖縄</li>
+			<li>北海道</li>
+			<li>京都</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			button.s01 {
+				pointer-events: auto;
+			}
+
+			button.s02 {
+				pointer-events: none;
+			}
+
+			button:hover {
+				background-color: pink;
+			}
+
+			/* base */
+			@layer {
+				button {
+					width: 200px;
+					padding: 8px 32px;
+					cursor: pointer;
+					border: none;
+					border-radius: 8px;
+					background-color: gold;
+					color: black;
+					font-weight: bold;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<button class="s01">ログイン</button>
+		<button class="s02">ログイン</button>
+	</body>
+</html>

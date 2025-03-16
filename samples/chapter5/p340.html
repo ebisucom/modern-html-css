@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+		<style>
+			p {
+				font-family: Lora, "Lora Fallback", serif;
+			}
+
+			@font-face {
+				font-family: "Lora Fallback";
+				src: local("Times New Roman");
+				ascent-override: 87.3264%;
+				descent-override: 23.7847%;
+				line-gap-override: 0%;
+				size-adjust: 115.2%;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>代替フォント（調整なし）</h2>
+		<p style="font-family: 'Times New Roman'; font-size-adjust: none">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum, diam ac commodo pulvinar, ligula tortor posuere nisi, a porta ligula odio at diam.
+		</p>
+
+		<h2>代替フォント（font-size-adjustで調整）</h2>
+		<p style="font-family: 'Times New Roman'; font-size-adjust: 0.5">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum, diam ac commodo pulvinar, ligula tortor posuere nisi, a porta ligula odio at diam.
+		</p>
+
+		<h2>代替フォント（@font-faceで調整）</h2>
+		<p style="font-family: 'Lora Fallback'">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum, diam ac commodo pulvinar, ligula tortor posuere nisi, a porta ligula odio at diam.
+		</p>
+
+		<h2>リモートフォント</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum, diam ac commodo pulvinar, ligula tortor posuere nisi, a porta ligula odio at diam.</p>
+	</body>
+</html>

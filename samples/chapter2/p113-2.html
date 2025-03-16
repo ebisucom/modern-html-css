@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			p {
+				background-color: peachpuff;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Action</h1>
+		<p>環境構築を行います</p>
+		<custom-attention></custom-attention>
+
+		<template id="custom-template">
+			<style>
+				p {
+					background-color: yellow;
+				}
+			</style>
+			<p>※予告なく変更される場合があります</p>
+		</template>
+
+		<script>
+			// カスタム要素のためのクラスを定義
+			class CustomAttention extends HTMLElement {
+				constructor() {
+					super()
+					// シャドウ DOM を作成する
+					this.attachShadow({ mode: "open" })
+					// テンプレートの中身を取得する
+					const template = document.getElementById("custom-template").content
+					// シャドウ DOM にテンプレートの中身を追加する
+					this.shadowRoot.appendChild(template.cloneNode(true))
+				}
+			}
+
+			// カスタム要素を登録する
+			customElements.define("custom-attention", CustomAttention)
+		</script>
+	</body>
+</html>

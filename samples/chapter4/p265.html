@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.s01 {
+				section {
+					display: grid;
+					grid-template-columns: 1fr 3fr auto;
+					grid-template-rows: 100px auto;
+				}
+
+				div.subgrid {
+					grid-column: 2 / 4;
+				}
+			}
+
+			.s02 {
+				section {
+					display: grid;
+					grid-template-columns: 1fr 3fr auto;
+					grid-template-rows: 100px auto;
+				}
+
+				div.subgrid {
+					grid-column: 2 / 4;
+					display: grid;
+					grid-template-columns: 3fr auto;
+				}
+			}
+
+			.s03 {
+				section {
+					display: grid;
+					grid-template-columns: 1fr 3fr auto;
+					grid-template-rows: 100px auto;
+				}
+
+				div.subgrid {
+					grid-column: 2 / 4;
+					display: grid;
+					grid-template-columns: subgrid;
+				}
+			}
+
+			.s04 {
+				section {
+					display: grid;
+					grid-template-columns: 1fr 3fr auto;
+					grid-template-rows: 100px auto;
+				}
+
+				div.subgrid {
+					grid-column: 2 / 4;
+					display: grid;
+					grid-template-columns: subgrid;
+					gap: 32px;
+				}
+			}
+
+			/* base */
+			@layer base, color;
+
+			@layer color {
+				section {
+					border: sodivd 4px royalblue;
+				}
+
+				div:nth-child(1) {
+					background-color: yellow;
+				}
+
+				div:nth-child(2) {
+					background-color: orange;
+				}
+
+				div:nth-child(3) {
+					background-color: pink;
+				}
+
+				div:nth-child(4) {
+					background-color: palegreen;
+				}
+
+				div:nth-child(5) {
+					background-color: lightblue;
+				}
+
+				.subgrid div:nth-child(1) {
+					background-color: midnightblue;
+				}
+
+				.subgrid div:nth-child(2) {
+					background-color: lch(from midnightblue calc(l + 15) c h);
+				}
+
+				.subgrid div:nth-child(3) {
+					background-color: lch(from midnightblue calc(l + 30) c h);
+				}
+
+				.subgrid div:nth-child(4) {
+					background-color: lch(from midnightblue calc(l + 45) c h);
+				}
+			}
+
+			@layer base {
+				body {
+					display: grid;
+					gap: 40px;
+				}
+
+				section {
+					font-family: outfit, sans-serif;
+					font-weight: bold;
+				}
+
+				div:not(.subgrid) {
+					display: grid;
+					place-items: center;
+					text-align: center;
+					padding: 5px;
+				}
+
+				.subgrid {
+					padding: 5px;
+					color: white;
+				}
+
+				a {
+					color: inherit;
+					text-decoration: inherit;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s01">
+			<section>
+				<div>Home</div>
+				<div>Office Services</div>
+				<div>Professional Design</div>
+				<div>Solutions</div>
+				<div class="subgrid">
+					<div>Special Subgrid Item 01</div>
+					<div>Special Subgrid Item 02</div>
+					<div>Special Subgrid Item 03</div>
+					<div>Special Subgrid Item 04</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="s02">
+			<section>
+				<div>Home</div>
+				<div>Office Services</div>
+				<div>Professional Design</div>
+				<div>Solutions</div>
+				<div class="subgrid">
+					<div>Special Subgrid Item 01</div>
+					<div>Special Subgrid Item 02</div>
+					<div>Special Subgrid Item 03</div>
+					<div>Special Subgrid Item 04</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="s03">
+			<section>
+				<div>Home</div>
+				<div>Office Services</div>
+				<div>Professional Design</div>
+				<div>Solutions</div>
+				<div class="subgrid">
+					<div>Special Subgrid Item 01</div>
+					<div>Special Subgrid Item 02</div>
+					<div>Special Subgrid Item 03</div>
+					<div>Special Subgrid Item 04</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="s04">
+			<section>
+				<div>Home</div>
+				<div>Office Services</div>
+				<div>Professional Design</div>
+				<div>Solutions</div>
+				<div class="subgrid">
+					<div>Special Subgrid Item 01</div>
+					<div>Special Subgrid Item 02</div>
+					<div>Special Subgrid Item 03</div>
+					<div>Special Subgrid Item 04</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

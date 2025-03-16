@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+		<link href="https://fonts.googleapis.com/css?family=Prompt:100,400,800" rel="stylesheet" />
+
+		<style>
+			div.s01 {
+				border: solid 30px #5ca8ee;
+				border-image: url(assets/border.png);
+				border-image-slice: 100;
+			}
+
+			div.s02 {
+				border: solid 30px #5ca8ee;
+				border-image: url(assets/border.png);
+				border-image-slice: 100 fill;
+			}
+
+			div.s03 {
+				border: solid 30px #5ca8ee;
+				border-image: url(assets/border.png);
+				border-image-slice: 100;
+				border-image-repeat: stretch;
+			}
+
+			div.s04 {
+				border: solid 30px #5ca8ee;
+				border-image: url(assets/border.png);
+				border-image-slice: 100;
+				border-image-repeat: repeat;
+			}
+
+			div.s05 {
+				border: solid 30px #5ca8ee;
+				border-image: url(assets/border.png);
+				border-image-slice: 100;
+				border-image-repeat: round;
+			}
+
+			div.s06 {
+				border: solid 30px #5ca8ee;
+				border-image: url(assets/border.png);
+				border-image-slice: 100;
+				border-image-repeat: space;
+			}
+
+			div.s07 {
+				border: solid 30px #5ca8ee;
+				border-image: url(assets/border.png);
+				border-image-slice: 100;
+				border-image-repeat: space;
+				border-image-width: 15px;
+			}
+
+			/* base */
+			@layer base {
+				body {
+					color: #333;
+					font-family: "Prompt", sans-serif;
+					text-align: center;
+				}
+				div {
+					margin: 50px 20px;
+					font-size: 30px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s03">HOME OFFICE</div>
+		<div class="s04">HOME OFFICE</div>
+		<div class="s05">HOME OFFICE</div>
+		<div class="s06">HOME OFFICE</div>
+		<div class="s07">HOME OFFICE</div>
+	</body>
+</html>

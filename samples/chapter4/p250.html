@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>サンプル</title>
+
+		<style>
+			.s01 {
+				writing-mode: vertical-rl;
+			}
+			.s02 {
+				writing-mode: vertical-lr;
+			}
+			.s03 {
+				writing-mode: sideways-rl;
+			}
+			.s04 {
+				writing-mode: sideways-lr;
+			}
+
+			/* base */
+			@layer base {
+				* {
+					box-sizing: border-box;
+					font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				}
+
+				body {
+					display: grid;
+					gap: 40px;
+				}
+
+				div {
+					height: 420px;
+					padding: 20px;
+					border: solid 6px #abcf3e;
+				}
+
+				h1 {
+					margin: 0;
+					padding: 5px 10px;
+					background: #f3c90b;
+					border: solid 4px royalblue;
+				}
+
+				p {
+					margin-block-end: 0;
+					border: solid 4px royalblue;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="s00">
+			<h1>快適な Home Office</h1>
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるホームアシスタントも充実してきています。</p>
+
+			<p>オフィスだからといって広い作業スペースは必要ありません。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。</p>
+		</div>
+
+		<div class="s01">
+			<h1>快適な Home Office</h1>
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるホームアシスタントも充実してきています。</p>
+
+			<p>オフィスだからといって広い作業スペースは必要ありません。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。</p>
+		</div>
+
+		<div class="s02">
+			<h1>快適な Home Office</h1>
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるホームアシスタントも充実してきています。</p>
+
+			<p>オフィスだからといって広い作業スペースは必要ありません。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。</p>
+		</div>
+
+		<div class="s03">
+			<h1>快適な Home Office</h1>
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるホームアシスタントも充実してきています。</p>
+
+			<p>オフィスだからといって広い作業スペースは必要ありません。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。</p>
+		</div>
+
+		<div class="s04">
+			<h1>快適な Home Office</h1>
+			<p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。面倒な作業を手助けしてくれるホームアシスタントも充実してきています。</p>
+
+			<p>オフィスだからといって広い作業スペースは必要ありません。Wi-Fiとパソコンを用意したら、そこはもうホームオフィスです。</p>
+		</div>
+	</body>
+</html>
